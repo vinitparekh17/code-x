@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 
 module.exports.run = async(bot,message,args) => {
     message.react('✅');
-   if(message.channel.name.startsWith('💸')){
+   if(message.channel.id !== "805773678636826644") return{
     const server = message.guild;
          console.log("1")
         server.channels.create(`pay-${message.author.username}` , {
