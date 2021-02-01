@@ -131,7 +131,7 @@ bot.on ("message"  , async message  =>  {
     if (message.content.startsWith(prefix + "champion")){
 
         message.react('<a:yes_1:788052811715575868>');
-        message.channel.send("Application form has been sent to ur dms!")
+        message.channel.send(" <@${message.member.id}> Check your DMs!")
 
         message.author.send(" <@${message.member.id}>
                             > ** [The Champion](<https://discord.gg/YrcSWmy>) **
