@@ -18,7 +18,7 @@ module.exports.run = async(bot,message,args) => {
             },
             {
                 id: message.author.id,
-                allow:  ['VIEW_CHANNEL']
+                allow:  ['VIEW_CHANNEL , SEND_MESSAGE , ATTACH_FILES']
 
             }
             
@@ -44,7 +44,7 @@ module.exports.run = async(bot,message,args) => {
             `)
             .setTimestamp()
             .setFooter(`Dont't ping unnecessarily`)
-            .setThumbnail('https://cdn.discordapp.com/icons/724858940252487720/a_8947ae0ba06fb618f31f8075ecd4cb36.png?size=1024')
+            .setThumbnail('https://cdn.discordapp.com/emojis/784788309938798652.png')
             .setImage('https://cdn.discordapp.com/attachments/778218564578574336/779008159100174336/Rainbow.gif')
             channel.send(sembed)
             let payembed = new Discord.MessageEmbed()
