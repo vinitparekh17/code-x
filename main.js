@@ -54,7 +54,7 @@ bot.on("ready", async () => {
        let modroles = ['653115183950200833', '730313466094813225', '551936470458433536', '732818401516453959', '732818652059140127', ]
 
        
-       bot.user.setActivity(activity, { type: "WATCHING"})
+       bot.user.setActivity(activity, { type: "LISTENING"})
     }, 5000)
 
 
@@ -133,7 +133,7 @@ bot.on ("message"  , async message  =>  {
         message.react('✅');
         message.channel.send("Application form has been sent to ur dms!")
 
-        message.author.send("https://forms.gle/6sQ4hhZmuYDwXegj8  ye lo beta,yaha jaake apply karo")
+        message.author.send("Staff application is currently closed! ")
 
         bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
         bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
