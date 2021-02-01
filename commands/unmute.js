@@ -1,9 +1,8 @@
-module.exports = {
+module.exports.run = async (bot,message,args) => {
 
-    name: 'unmute',
+    const Discord = require('discord.js')
 
-    description: "This unmutes a member",
-
+    const ms = require('ms')
     execute(message, args){
 
         const target = message.mentions.users.first();
