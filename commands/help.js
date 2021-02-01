@@ -64,5 +64,5 @@ module.exports.run = async(bot,message,args) => {
     }
     module.exports.help = {
         name: "paytmdetails",
-        aliases: ["Help" , "Halp" ,"pay" , "payme" , "paisa" , "pd"]
+        aliases: ["pd"]
     }
