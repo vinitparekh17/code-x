@@ -1,5 +1,5 @@
 module.exports.run = async(bot,message,args) => {
-    if(message.channel.name.startsWith('pay') || message.channel.name.startsWith('giveawaysuggestion')){
+    if(message.channel.name.startsWith('pay') || message.channel.name.startsWith('closed')){
 
         message.channel.delete();
     }
