@@ -6,7 +6,7 @@ module.exports.run = async(bot,message,args) => {
    if(message.channel.name.startsWith('💸')){
     const server = message.guild;
          console.log("1")
-        server.channels.create(`pay-${message.author.username}` , {
+        server.channels.create(`${message.author.username}` , {
           type: 'text',
 
           permissionOverwrites: [
