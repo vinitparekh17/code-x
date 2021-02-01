@@ -128,30 +128,12 @@ bot.on ("message"  , async message  =>  {
 
 
     }
-    if (message.content.startsWith(prefix + "champion")){
+    if (message.content.startsWith(prefix + "link")){
 
         message.react('<a:yes_1:788052811715575868>');
         message.channel.send(" <@${message.member.id}> Check your DMs!")
 
-        message.author.send("[The Champion](<https://discord.gg/YrcSWmy>) **
-
-> **Guild Link : <https://www.game.tv/t/kLBCV2nO8>**
-
-> **[Aqua Champion](<https://discord.gg/K3MbbCR>)**
-
-> **Guild Link : <https://www.game.tv/t/mvnXtmpQ4>**
-
-> **[Galaxy ❯ Gaming](<https://discord.gg/JpujVsgeFY>)**
-
-> **Guild Link : <https://www.game.tv/t/paLcH7L2g> **
-
-> **[Bounty Champion](<https://discord.gg/ugRyMJpazG>)**
-
-> **Guild Link : <https://www.game.tv/t/udgH2lqBa>**
-
-> **[Dark Champion](<https://discord.gg/SC49wQ3JNb>) **
-
-> **Guild Link : <https://www.game.tv/t/rSXj4Unw4> **")
+        message.author.send("[Aqua Champion](https://discord.gg/K3MbbCR) Guild Link: https://www.game.tv/t/mvnXtmpQ4")
 
         bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
         bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
