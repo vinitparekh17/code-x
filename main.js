@@ -133,15 +133,8 @@ bot.on ("message"  , async message  =>  {
         message.react('<a:yes_1:788052811715575868>');
         message.channel.send(" <@${message.member.id}> Check your DMs!")
 
-        message.author.send("[Aqua Champion](https://discord.gg/K3MbbCR) Guild Link: https://www.game.tv/t/mvnXtmpQ4")
-
-        bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
-        bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
-
-
-
-    }
-    if (message.content.startsWith(prefix + "send")){
+        message.author.send("[Aqua Champion](https://discord.gg/K3MbbCR)
+        if (message.content.startsWith(prefix + "send")){
         
         
         if (mention == null){
