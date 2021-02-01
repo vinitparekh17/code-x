@@ -47,7 +47,7 @@ bot.on("ready", async () => {
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `Playing with $VINIT$| Watching ${numberomember} members` ,  '!pd for Payment | !help for list of commands']
+        let activities = [ `$VINIT$ | Watching ${numberomember} members` ,  '!pd for Payment | !help for list of commands']
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
@@ -207,7 +207,7 @@ bot.on ("message"  , async message  =>  {
             newData.save().catch(err => console.log(err));
             console.log("DID WRONG")
         }
-        else if(message.channel.id ==='678570369870725120' && message.channel.id === '770992903048790096'){
+        else if(message.channel.id ==='658954070794436608' && message.channel.id === '770992903048790096'){
             data.money = data.money + 1
            
             console.log("Process completed")
