@@ -1,7 +1,10 @@
-module.exports.help = {
-    name: "mute",
-    aliases: ["chup" , "Mute"]
-const ms = require('ms');
+module.exports.run = async (bot,message,args) => {
+
+  const ms = require('ms')
+
+  const Discord = require('discord.js')
+
+    if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply("U cannot mute someone u idiot!")}
 module.exports = {
     name: 'mute',
     description: "This mutes a member",
