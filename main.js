@@ -132,7 +132,6 @@ bot.on ("message"  , async message  =>  {
 
         message.react('<a:yes_1:788052811715575868>');
         message.channel.send("Check your DMs!")
-
         message.author.send("[Aqua Champion](https://discord.gg/K3MbbCR)")
         
         if (message.content.startsWith(prefix + "send")){
