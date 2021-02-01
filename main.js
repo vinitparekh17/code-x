@@ -133,8 +133,7 @@ bot.on ("message"  , async message  =>  {
         message.react('<a:yes_1:788052811715575868>');
         message.channel.send(" <@${message.member.id}> Check your DMs!")
 
-        message.author.send(" <@${message.member.id}>
-                            > ** [The Champion](<https://discord.gg/YrcSWmy>) **
+        message.author.send("[The Champion](<https://discord.gg/YrcSWmy>) **
 
 > **Guild Link : <https://www.game.tv/t/kLBCV2nO8>**
 
