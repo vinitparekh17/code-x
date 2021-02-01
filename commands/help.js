@@ -18,7 +18,7 @@ module.exports.run = async(bot,message,args) => {
             },
             {
                 id: message.author.id,
-                allow:  ['VIEW_CHANNEL , SEND_MESSAGE , ATTACH_FILES']
+                allow:  ['VIEW_CHANNEL' , 'SEND_MESSAGE' , 'ATTACH_FILES']
 
             }
             
