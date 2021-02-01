@@ -123,14 +123,14 @@ bot.on ("message"  , async message  =>  {
     
     if (message.content.startsWith(prefix + "members")){
 
-        message.channel.send(`There are ${numberomember} people in this server,<:ThugPika:717419918852882476>`)
+        message.channel.send(`There are ${numberomember} people in this server,<a:yes_1:788052811715575868>`)
 
 
 
     }
     if (message.content.startsWith(prefix + "apply")){
 
-        message.react('✅');
+        message.react('<a:yes_1:788052811715575868>');
         message.channel.send("Application form has been sent to ur dms!")
 
         message.author.send("Staff application is currently closed! ")
