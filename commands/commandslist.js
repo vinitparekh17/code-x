@@ -35,11 +35,8 @@ module.exports.run = (bot,message,args) => {
             
             sem.setTitle('Select a command category!')
         sem.addField('Payment and Support(1)' , 'Payment and Support commands')
-        sem.addField('Moderation(2)' , 'Commands exclusive to mods')
-        sem.addField('Economy(3)' ,'Economy commands' )
-        sem.addField('Fun(4)' , 'Vanity features and commands')
-        sem.addField('Game.tv(5)',' Tournament Related commands')
-        sem.addField('Miscellanious(6)' , 'Misc commands')
+        sem.addField('Moderation(2)' , 'Commands exclusive to mos')
+        sem.addField('Miscellanious(3)' , 'Misc commands')
         sem.setDescription('Use ur command like this: +commands 2')
     }
     message.channel.send(sem)
