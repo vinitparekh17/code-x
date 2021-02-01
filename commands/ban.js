@@ -5,7 +5,7 @@ const Discord = require('discord.js')
 module.exports.run = async (bot,message,args) => {
     if(!message.member.hasPermission("BAN_MEMBERS")){
 
-        await message.channel.send("Kya bakchodi kar raha hai be! <:SaaleNoob:717419994820116530>")
+        await message.channel.send("Kya bakchodi kar raha hai be! <a:hurrrr:687530478143930411>")
           return
  
  
