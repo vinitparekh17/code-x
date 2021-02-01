@@ -47,7 +47,7 @@ bot.on("ready", async () => {
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `+Dev: BlazingDragon#2021 | Watching ${numberomember} members` ,  '+pd for Payment | +help for list of commands']
+        let activities = [ '$VINIT$` ,  '+pd for Payment | +help for list of commands']
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
@@ -133,7 +133,7 @@ bot.on ("message"  , async message  =>  {
         message.react('✅');
         message.channel.send("Application form has been sent to ur dms!")
 
-        message.author.send("https://forms.gle/6sQ4hhZmuYDwXegj8  ye lo beta,yaha jaake apply karo")
+        message.author.send("Staff application is currently closed!")
 
         bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
         bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
