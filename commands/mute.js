@@ -1,16 +1,3 @@
-
-
-
-
-            
-            }
-         
-          person.roles.add(mainrole.id);
-          BlazingDragon" , 'https://i.imgur.com/5O2LozU.jpg')
-        
-      },ms(time));
-}
-
 module.exports.help = {
     name: "mute",
     aliases: ["chup" , "Mute"]
