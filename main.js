@@ -1,4 +1,4 @@
-const token = "Nzc4Mjg0NzExNDI4MDk2MDAw.X7PwHw.-QN-Lc_o4EKEDKKmfa9zPc-UCiE"
+const token = "process.env.token"
 const  Discord  = require('discord.js');
 const bot = new Discord.Client({ ws: { intents: ['GUILDS', 'GUILD_MESSAGES','GUILD_MEMBERS','GUILD_PRESENCES'] } });
 
@@ -47,14 +47,14 @@ bot.on("ready", async () => {
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `+Dev: BlazingDragon#2021 | Watching ${numberomember} members` ,  '+pd for Payment | +help for list of commands']
+        let activities = [ `$VINIT$ ` ,  '+pd for Payment | +help for list of commands']
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
        let modroles = ['653115183950200833', '730313466094813225', '551936470458433536', '732818401516453959', '732818652059140127', ]
 
        
-       bot.user.setActivity(activity, { type: "WATCHING"})
+       bot.user.setActivity(activity, { type: "PLAYING"})
     }, 5000)
 
 
