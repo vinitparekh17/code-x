@@ -47,7 +47,7 @@ bot.user.setStatus('dnd')
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `$VINIT$#9347`,`SuRaj#1224`,`ᐯᎥᑭ 〆 brave boy#0007`,`KrnRunHYFT#5060` ,  'Joined client.guild.cache.size Servers!']
+        let activities = [ `!ticket for creating tickets` | '!help for list of commands' ,  'Joined client.guilds.cache.size Servers!']
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
