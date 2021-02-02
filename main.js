@@ -47,7 +47,7 @@ bot.on("ready", async () => {
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ 'WITH $VINIT$' ,  '!ticket for Payment | !help for list of commands']
+        let activities = [ 'with $VINIT$' ,  '!ticket for Payment | !help for list of commands']
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
