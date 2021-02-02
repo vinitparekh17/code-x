@@ -18,7 +18,7 @@ module.exports.run = async(bot,message,args) => {
             },
             {
                 id: message.author.id,
-                allow:  ['VIEW_CHANNEL']
+                allow:  ['VIEW_CHANNEL' , 'SEND_MESSAGES' , 'ATTACH_FILES']
 
             }
             
@@ -37,10 +37,10 @@ module.exports.run = async(bot,message,args) => {
             let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Send Your PayTM details!')
-            .setDescription(`<a:hypesquad:779012310504964126> PayTM associated name:
-<a:hypesquad:779012310504964126> PayTM associated number:
-<a:hypesquad:779012310504964126> List of payments due:
-<a:hypesquad:779012310504964126> Screenshot(s) from game.tv app:
+            .setDescription(`♦ Paytm associated name:
+♦ Paytm number:
+♦ Payment due:
+♦ Screenshot(s) from <#780049423270412298> :
             `)
             .setTimestamp()
             .setFooter(`Dont't ping unnecessarily`)
@@ -64,5 +64,4 @@ module.exports.run = async(bot,message,args) => {
     }
     module.exports.help = {
         name: "paytmdetails",
-        aliases: ["Help" , "Halp" ,"pay" , "payme" , "paisa" , "pd"]
-    }
+        aliases: ["ticket"}
