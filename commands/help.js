@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 
 module.exports.run = async(bot,message,args) => {
     message.react('✅');
-   if(message.channel.name.startsWith('💸')){
+   if(message.channel.name.startsWith('𒁷〢prize-claim')){
     const server = message.guild;
          console.log("1")
         server.channels.create(`pay-${message.author.username}` , {
@@ -49,7 +49,7 @@ Screenshot(s) from <#780049423270412298>:
             channel.send(sembed)
             let payembed = new Discord.MessageEmbed()
             .setTitle('Payment/Support thread created!')
-            .setColor('#00FFE6')
+            .setColor('RANDOM')
             .setDescription(`Your ticket channel <#${channel.id}> has been created! <a:yes:767757416174714920>`)
             .setTimestamp()
            
