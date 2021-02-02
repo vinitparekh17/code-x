@@ -31,7 +31,7 @@ module.exports.run = async (bot,message,args)=>{
             .addField('Reason:', message.content)
             .setTimestamp()
             message.channel.send(klog)
-            bot.channels.cache.get('778559682712961031').send(klog)
+            bot.channels.cache.get('806045165922943016').send(klog)
 
 
 
