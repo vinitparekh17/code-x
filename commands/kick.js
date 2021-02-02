@@ -27,22 +27,20 @@ module.exports.run = async (bot,message,args)=>{
             var klog = new Discord.MessageEmbed()
             .setColor('FF003C')
             .setTitle(`Whoa,U Just Kicked Out This Dude!`)
-            .addField('User:' , message.mentions.members.first().user.username ,true)
-            .addField('By:', message.author.username,true)
+            .addField(`message.mentions.members.first().user.username ,true was kicked by message.author.username,true`)
             .addField('Reason:', message.content)
             .setTimestamp()
-            .setFooter('Dev: RLX | BlazingDragon' , 'https://i.imgur.com/5O2LozU.jpg')
             message.channel.send(klog)
             bot.channels.cache.get('778559682712961031').send(klog)
 
 
 
 
-       }).catch(err=>{message.channel.send("Uh Oh,couldn't kick this boi..") 
-       bot.users.cache.get('324442848759906314').send(`Couldnt kick.. ${err}`)
+       }).catch(err=>{message.channel.send("Done!") 
+       bot.users.cache.get('806045165922943016').send(`Couldnt kick.. ${err}`)
        return
        })
-       message.channel.send(`Whoa,you just kicked out **${message.mentions.members.first().user.username}**` )
+       message.channel.send(` **${message.mentions.members.first().user.username}** has been kicked!` )
 
 
 }
