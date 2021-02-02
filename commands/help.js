@@ -37,10 +37,10 @@ module.exports.run = async(bot,message,args) => {
             let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Send Your PayTM details!')
-            .setDescription(`<a:hypesquad:779012310504964126> PayTM associated name:
-<a:hypesquad:779012310504964126> PayTM associated number:
-<a:hypesquad:779012310504964126> List of payments due:
-<a:hypesquad:779012310504964126> Screenshot(s) from game.tv app:
+            .setDescription(`:hypesquad: Paytm associated name:
+:hypesquad: Paytm dnumber:
+:hypesquad: List of payments due:
+:hypesquad: Screenshot(s) from game.tv app:
             `)
             .setTimestamp()
             .setFooter(`Dont't ping unnecessarily`)
