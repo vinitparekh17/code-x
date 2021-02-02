@@ -40,7 +40,7 @@ module.exports.run = async(bot,message,args) => {
             .setDescription(`:hypesquad: Paytm associated name:
 :hypesquad: Paytm dnumber:
 :hypesquad: List of payments due:
-:hypesquad: Screenshot(s) from game.tv app:
+:hypesquad: Screenshot(s) from <#780049423270412298>:
             `)
             .setTimestamp()
             .setFooter(`Dont't ping unnecessarily`)
@@ -64,5 +64,5 @@ module.exports.run = async(bot,message,args) => {
     }
     module.exports.help = {
         name: "paytmdetails",
-        aliases: ["Help" , "Halp" ,"pay" , "payme" , "paisa" , "pd"]
+        aliases: ["Help" , "ticket" ,"pay" , "payme" , "paisa" , "pd"]
     }
