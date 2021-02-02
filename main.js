@@ -39,7 +39,7 @@ fs.readdir("./commands/" , (err,files) => {
 })
 
 bot.on("ready", async () => {
-bot.user.setStatus('idle')
+bot.user.setStatus('dnd')
   .then(console.log)
   .catch(console.error);
      console.log(  "I am READY!")
