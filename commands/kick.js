@@ -23,14 +23,7 @@ module.exports.run = async (bot,message,args)=>{
     }
 
 
-      await mention.send(`You have been kicked from the The Champion server by ${message.author.username}. Reason: ${message.content} `).catch(err =>{
-          message.channel.send("Unable to send messages to this user!!I couldn't DM him about this kick.")
-          bot.users.cache.get('324442848759906314').send(`an error occurred while trying to kick a dude ${err}`)
-          
-
-
-      })
-       await message.mentions.members.first().kick().then((abc) => {
+             await message.mentions.members.first().kick().then((abc) => {
             var klog = new Discord.MessageEmbed()
             .setColor('FF003C')
             .setTitle(`Whoa,U Just Kicked Out This Dude!`)
