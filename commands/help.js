@@ -33,7 +33,7 @@ module.exports.run = async(bot,message,args) => {
 
 
         }).then(channel =>{
-          channel.send(`<@${message.member.id}>, only PayTM details allowed here!`)
+          channel.send(`<@${message.member.id}> **Only Paytm details allowed here!**`)
             let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Send Your PayTM details!')
@@ -43,8 +43,8 @@ Payment due:
 Screenshot(s) from <#780049423270412298>:
             `)
             .setTimestamp()
-            .setFooter(`Dont't ping unnecessarily`)
-            .setThumbnail('https://cdn.discordapp.com/icons/724858940252487720/a_8947ae0ba06fb618f31f8075ecd4cb36.png?size=1024')
+            .setFooter(`Dont't ping unnecessary!`)
+            .setThumbnail('https://cdn.discordapp.com/emojis/788686359945674764.png')
             .setImage('https://cdn.discordapp.com/attachments/778218564578574336/779008159100174336/Rainbow.gif')
             channel.send(sembed)
             let payembed = new Discord.MessageEmbed()
