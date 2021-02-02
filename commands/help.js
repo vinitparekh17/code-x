@@ -18,7 +18,7 @@ module.exports.run = async(bot,message,args) => {
             },
             {
                 id: message.author.id,
-                allow:  ['VIEW_CHANNEL','SEND_MESSAGES','ATTACH_FILES']
+                allow:  ['VIEW_CHANNEL','SEND_MESSAGES','ATTACH_FILES','READ_MESSAGE_HISTORY']
 
             }
             
@@ -37,10 +37,10 @@ module.exports.run = async(bot,message,args) => {
             let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Send Your PayTM details!')
-            .setDescription(`:hypesquad: Paytm associated name:
-:hypesquad: Paytm dnumber:
-:hypesquad: List of payments due:
-:hypesquad: Screenshot(s) from <#780049423270412298>:
+            .setDescription(`Paytm associated name:
+Paytm number:
+Payment due:
+Screenshot(s) from <#780049423270412298>:
             `)
             .setTimestamp()
             .setFooter(`Dont't ping unnecessarily`)
