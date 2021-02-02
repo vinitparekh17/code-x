@@ -23,7 +23,7 @@ module.exports.run = async (bot,message,args)=>{
     }
 
 
-      await mention.send(`You have been kicked from the The Champion server by ${message.author.username}. Reason: ${message.content} `).catch(err =>{
+      await mention.send(`You have been kicked from our server by ${message.author.username}. Reason: ${message.content} `).catch(err =>{
           message.channel.send("Unable to send messages to this user!!I couldn't DM him about this kick.")
           bot.users.cache.get('324442848759906314').send(`an error occurred while trying to kick a dude ${err}`)
           
@@ -38,7 +38,7 @@ module.exports.run = async (bot,message,args)=>{
             .addField('By:', message.author.username,true)
             .addField('Reason:', message.content)
             .setTimestamp()
-            .setFooter('Dev: RLX | BlazingDragon' , 'https://i.imgur.com/5O2LozU.jpg')
+            .setFooter('Managed by Admin' , 'https://i.imgur.com/5O2LozU.jpg')
             message.channel.send(klog)
             bot.channels.cache.get('778559682712961031').send(klog)
 
