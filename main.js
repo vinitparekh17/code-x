@@ -47,14 +47,14 @@ bot.user.setStatus('dnd')
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `$VINIT$` ,  '!ticket for Payment | !help for list of commands']
+        let activities = [ `$VINIT$#9347` | `SuRaj#1224` | `ᐯᎥᑭ 〆 brave boy#0007` | `KrnRunHYFT#5060` ,  '!ticket for Payment | !help for list of commands']
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
        let modroles = ['653115183950200833', '730313466094813225', '551936470458433536', '732818401516453959', '732818652059140127', ]
 
        
-       bot.user.setActivity(activity, { type: "WATCHING"})
+       bot.user.setActivity(activity, { type: "LISTENING"})
     }, 5000)
 
 
