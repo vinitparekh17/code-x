@@ -27,7 +27,7 @@ module.exports.run = async (bot,message,args)=>{
             var klog = new Discord.MessageEmbed()
             .setColor('FF003C')
             .setTitle(`Whoa,U Just Kicked Out This Dude!`)
-            .addField(`message.mentions.members.first().user.username ,true was kicked by message.author.username,true`)
+            .addField('Action:', message.mentions.members.first().user.username ,true was kicked by message.author.username,true)
             .addField('Reason:', message.content)
             .setTimestamp()
             message.channel.send(klog)
