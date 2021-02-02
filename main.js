@@ -39,11 +39,10 @@ fs.readdir("./commands/" , (err,files) => {
 })
 
 bot.on("ready", async () => {
-bot.user.setStatus(`dnd')
-   .then(console.log)
-   .catch(console.error);
-
-      console.log(  "I am READY!")
+bot.user.setStatus('dnd')
+  .then(console.log)
+  .catch(console.error);
+     console.log(  "I am READY!")
 
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
