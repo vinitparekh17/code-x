@@ -38,9 +38,9 @@ module.exports.run = async (bot,message,args)=>{
             .addField('By:', message.author.username,true)
             .addField('Reason:', message.content)
             .setTimestamp()
-            .setFooter('Managed by Admin' , 'https://i.imgur.com/5O2LozU.jpg')
+            .setFooter('Managed by Admin')
             message.channel.send(klog)
-            bot.channels.cache.get('778559682712961031').send(klog)
+            bot.channels.cache.get('806045165922943016').send(klog)
 
 
 
