@@ -8,7 +8,7 @@ module.exports.run = async (bot,message,args) => {
       let person = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]))
       if(!person) return message.reply("Oye YE kaun hai?Thikse mention kar kisiko!")
 
-      let mainrole = message.guild.roles.cache.find(role => role.name === "⊱ |──►Verified◄──| ⊰")
+      let mainrole = message.guild.roles.cache.find(role => role.name === "❖Aqua Members❖")
       let muterole = message.guild.roles.cache.find(role => role.name === "Muted")
 
       if(!muterole) return message.reply("YE MUTE ROLE KAHA GAYA!!!!")
