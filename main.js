@@ -39,7 +39,7 @@ fs.readdir("./commands/" , (err,files) => {
 })
 
 bot.on("ready", async () => {
-bot.user.setStatus('dnd')
+bot.user.setStatus('idle')
   .then(console.log)
   .catch(console.error);
      console.log(  "I am READY!")
@@ -51,7 +51,7 @@ bot.user.setStatus('dnd')
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
-       let modroles = ['653115183950200833', '730313466094813225', '551936470458433536', '732818401516453959', '732818652059140127', ]
+       let modroles = ['653115183950200833', ]
 
        
        bot.user.setActivity(activity, { type: "LISTENING"})
