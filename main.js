@@ -47,14 +47,14 @@ bot.user.setStatus('dnd')
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `!ticket for creating tickets`, '!help for list of commands' ,  ` ${bot.guilds.cache.size} Servers` ]
+        let activities = [ '!help | ` ${bot.guilds.cache.size} Servers` ]
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
        let modroles = ['653115183950200833', ]
 
        
-       bot.user.setActivity(activity, { type: "LISTENING"})
+       bot.user.setActivity(activity, { type: "WATCHING"})
     }, 5000)
 
 
