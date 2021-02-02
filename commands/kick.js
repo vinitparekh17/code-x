@@ -1,3 +1,5 @@
+const Discord = require('discord.js')
+const mongoose = require('mongoose')
 module.exports.run = {
     name: 'kick',
     description: "This command kicks a member!",
