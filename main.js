@@ -39,7 +39,7 @@ fs.readdir("./commands/" , (err,files) => {
 })
 
 bot.on("ready", async () => {
-bot.user.setStatus('dnd')
+bot.user.setStatus('dnd','idle','online')
   .then(console.log)
   .catch(console.error);
      console.log(  "I am READY!")
@@ -47,14 +47,14 @@ bot.user.setStatus('dnd')
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `!help |  ${bot.guilds.cache.size} Servers!` ]
+        let activities = [ `!help |  ${bot.guilds.cache.size} Servers!`,'CHAMPIONS' ]
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
        let modroles = ['653115183950200833', ]
 
        
-       bot.user.setActivity(activity, { type: "WATCHING"})
+       bot.user.setActivity(activity, { type: "LISTENING","WATCHING","PLAYING"})
     }, 5000)
 
 
