@@ -1,6 +1,6 @@
 const { Command } = require('discord.js-commando');
 const Discord = require('discord.js');
-module.exports = class CreateChannelCommand extends Command {
+module.exports.run= class CreateChannelCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'createchannel',
