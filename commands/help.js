@@ -2,7 +2,7 @@ const { DiscordAPIError } = require("discord.js");
 const Discord = require('discord.js')
 
 module.exports.run = async(bot,message,args) => {
-    message.react('✅');
+    message.react('<a:ac_loading:806430327924457492>');
    if(message.channel.name.startsWith('𒁷〢prize-claim')){
     const server = message.guild;
          console.log("1")
