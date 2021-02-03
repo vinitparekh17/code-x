@@ -54,7 +54,7 @@ bot.user.setStatus('dnd','idle','online')
        let modroles = ['653115183950200833', ]
 
        
-       bot.user.setActivity(activity, { type: "LISTENING"})
+       bot.user.setActivity(activity, { type: 'LISTENING','WATCHING','PLAYING'})
     }, 5000)
 
 
