@@ -54,7 +54,7 @@ Screenshot(s) from <#780049423270412298>:
             .setTimestamp()
            
             
-              message.channel.send(payembed)
+              message.author.send(payembed)
         })
 
       }else{
