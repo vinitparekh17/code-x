@@ -50,7 +50,7 @@ Screenshot(s) from <#780049423270412298>:
             let payembed = new Discord.MessageEmbed()
             .setTitle('Payment/Support thread created!')
             .setColor('RANDOM')
-            .setDescription(`Your ticket channel <#${channel.id}> has been created! <a:yes:767757416174714920>`)
+            .setDescription(`Your ticket channel <#${channel.id}> has been created! <a:3307_verif_red:758239955742097409> `)
             .setTimestamp()
            
             
