@@ -7,7 +7,7 @@ module.exports.run = async(bot,message,args) => {
     const server = message.guild;
          console.log("1")
         server.channels.create(`pay-${message.author.username}` , {
-          type: 'text',
+          type: 'text', '〢 ━━━ Payment Area ━━━ 〢'
 
           permissionOverwrites: [
 
