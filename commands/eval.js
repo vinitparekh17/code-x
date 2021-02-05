@@ -1,5 +1,5 @@
 
-module.exports.run = async(bot,message,args) =>
+module.exports.run = async(bot,message,args) => {
 
         var result = message.split(" ").slice(1).join(" ")
         let evaled = eval(result);
