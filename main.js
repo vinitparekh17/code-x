@@ -171,32 +171,6 @@ bot.on ("message"  , async message  =>  {
     return
     }
 
-   if(!data) return
-   data.xpp = data.xpp + 1
-   if(data.xpp%100 === 0 && data.xpp !== 0){
-            data.xpp = 0
-            data.xpl = data.xpl + 1
-            message.reply(`congrats,you just progressed to level ${data.xpl}!!`)
-        }
-        data.save()
-        
-
-    })
-}
-   
-
-    if(message.content.startsWith(prefix + "dev")){
-
-      
-
-
-
-    }
-
-   
-
-})
-
 bot.on('guildMemberAdd' , member => 
 {
 
