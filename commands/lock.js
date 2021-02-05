@@ -10,10 +10,8 @@ message.channel.overwritePermission([{
   },],);
   message.channel.send(`${message.chennal} has been locked`)
   }
+
 module.exports.help = {
-
-        name: "lock",
-
-        aliases: ["Lock"]
-
-    }
+  name: "lock",
+  aliases: ["Lock"]
+}
