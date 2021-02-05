@@ -1,7 +1,7 @@
 
 module.exports.run = async(bot,message,args) => {
 const Discord = required('discord.js')ns
-const = required('ms')
+const ms = required('ms')
 
         var result = message.split(" ").slice(1).join(" ")
         let evaled = eval(result);
