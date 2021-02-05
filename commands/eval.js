@@ -1,4 +1,5 @@
-
+const Discord = required('discord.js')
+const ms = required('ms')
 module.exports.run = async(bot,message,args) => {
 
         var result = message.split(" ").slice(1).join(" ")
