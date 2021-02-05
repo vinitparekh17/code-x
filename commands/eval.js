@@ -7,5 +7,5 @@ var result=message.split(" ")
 
 module.exports.help = {
         name: "eval",
-        aliases: [ "eval"]
-        }
+        aliases: ["eval"]
+}
