@@ -160,21 +160,6 @@ bot.on ("message"  , async message  =>  {
     }
 
 
-     message.content = message.content.toLowerCase();
-    if(message.content.includes("pandu")){
-
-        let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
-
-        message.react(`${ranpanda}`);
-
-    }
-    if(message.content.includes("panda")){
-
-        let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
-
-        message.react(`${ranpanda}`);
-
-    }
     if(message.content.startsWith(prefix)){
     if (bot.commands.has(cmd))
     command = bot.commands.get(cmd);
@@ -185,40 +170,6 @@ bot.on ("message"  , async message  =>  {
     command.run(bot, message, args);
     return
     }
-    Data.findOne({
-        userID: message.author.id
-    },(err,data) =>{
-        if(!data)
-        {
-            const newData = new Data({
-                name: message.author.username,
-                userID: message.author.id,
-                money: 0,
-                lb: 'all',
-                xpp: 0,
-                xpl: 1,
-                daily: Date.now(),
-                begtimer:Date.now(),
-                robtimer: Date.now(),
-                warns: 0,
-                dailyr: Date.now() - 8.64e+7,
-                weeklyr: Date.now() - 6.048e+8
-            })
-            newData.save().catch(err => console.log(err));
-            console.log("DID WRONG")
-        }
-        else if(message.channel.id ==='678570369870725120' && message.channel.id === '770992903048790096'){
-            data.money = data.money + 1
-           
-            console.log("Process completed")
-         
-        }
-        else{
-            
-           
-            
-
-        }
 
    if(!data) return
    data.xpp = data.xpp + 1
