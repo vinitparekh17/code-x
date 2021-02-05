@@ -3,7 +3,7 @@ module.exports.run = async(bot,message,args) => {
 
         message.channel.delete();
     }
-    else{message.channel.send("Bhag bsdk, This is not ticket channel! ")}
+    else{message.channel.reply("Bhag bsdk, This is not ticket channel! ")}
 
 }
 
