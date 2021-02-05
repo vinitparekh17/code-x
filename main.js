@@ -1,4 +1,4 @@
-const token = "Nzc4Mjg0NzExNDI4MDk2MDAw.X7PwHw.-QN-Lc_o4EKEDKKmfa9zPc-UCiE"
+const token = process.env.token
 const  Discord  = require('discord.js');
 const bot = new Discord.Client({ ws: { intents: ['GUILDS', 'GUILD_MESSAGES','GUILD_MEMBERS','GUILD_PRESENCES'] } });
 
