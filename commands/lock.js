@@ -9,3 +9,11 @@ message.channel.overwritePermission([{
    deny: ['SEND_MESSAGES'],
   },],);
   message.channel.send(`${message.chennal} has been locked`)
+  }
+module.exports.help = {
+
+        name: "lock",
+
+        aliases: ["Lock"]
+
+    }
