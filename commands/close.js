@@ -1,9 +1,9 @@
 module.exports.run = async(bot,message,args) => {
-    if(message.channel.name.startsWith('pay') || message.channel.name.startsWith('giveawaysuggestion')){
+    if(message.channel.name.startsWith('pay') || message.channel.name.startsWith('Closed')){
 
         message.channel.delete();
     }
-    else{message.channel.send("NO U <:SaaleNoob:717419994820116530>")}
+    else{message.channel.send("This is not ticket channel Noob!")}
 
 }
 
