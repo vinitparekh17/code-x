@@ -47,7 +47,7 @@ bot.user.setStatus('dnd')
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `${bot.guild.cache.size} Servers!` ,  '!ticket for Payment | !help for list of commands']
+        let activities = [ 'Champions' ,  '!ticket for Payment | !help for list of commands']
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
