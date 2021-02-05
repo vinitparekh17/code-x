@@ -4,3 +4,6 @@ var result=message.split(" ")
         const.log(result)
         message.chennal.send(evaled)
 }        
+
+module.exports.help {
+        name: eval
