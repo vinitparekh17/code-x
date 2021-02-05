@@ -6,4 +6,6 @@ var result=message.split(" ")
 }        
 
 module.exports.help {
-        name: eval
+        name: "eval",
+        aliases: [ "eval"]
+        }
