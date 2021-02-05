@@ -3,11 +3,8 @@ module.exports.run = async(bot,message,args) => {
 
         message.channel.delete();
     }
-    else{message.chennal.reply("Bhag bsdk, This is not ticket channel! ")
-        .then(() => console.log(`Sent reply to ${message.author.username}`))
-         .catch(console.error);
-         
-}
+    else{message.chennal.reply(`${message.author.username}Bhag bsdk, This is not ticket channel!`)
+         }
     
 module.exports.help = {
     name: "close",
