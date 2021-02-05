@@ -5,7 +5,7 @@ const ms = required('ms')
 
         var result = message.split(" ").slice(1).join(" ")
         let evaled = eval(result);
-        const.log("result")
+        console.log(result)
         message.chennal.send(evaled)
 }        
 
