@@ -5,7 +5,7 @@ var result=message.split(" ")
         message.chennal.send(evaled)
 }        
 
-module.exports.help {
+module.exports.help = {
         name: "eval",
         aliases: [ "eval"]
         }
