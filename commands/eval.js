@@ -11,5 +11,5 @@ const ms = required('ms')
 
 module.exports.help = {
         name: "eval",
-        aliases: []
+        aliases: ["eval"]
 }
