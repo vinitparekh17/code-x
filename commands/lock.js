@@ -2,7 +2,7 @@ const { DiscordAPIError } = require("discord.js");
 const Discord = require('discord.js')
 
 module.exports.run = async(bot,message,args) => {
-if(!message.member.haspermissiom(MANAGE_CHANNELS)) return message.reply("You don't have enough permission to use this command!")
+ if(!message.member.haspermissiom(MANAGE_CHANNELS)) return message.reply("You don't have enough permission to use this command!")
   
 message.channel.overwritePermission([{
    id: message.guild.id,
@@ -13,5 +13,5 @@ message.channel.overwritePermission([{
 
 module.exports.help = {
   name: "lock",
-  aliases: ["Lock"]
+  aliases: ["lock"]
 }
