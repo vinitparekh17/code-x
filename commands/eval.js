@@ -7,5 +7,5 @@ var result = message.split(" ").slice(1).join(" ")
 
 module.exports.help = {
         name: "eval",
-        aliases: ["eval"]
+        aliases: []
 }
