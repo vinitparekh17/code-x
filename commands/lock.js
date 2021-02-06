@@ -6,10 +6,10 @@ module.exports.run = async(bot,message,args) => {
   
  permissionOverwrites.update({
      id: message.guild.id,
-     deny: ["SEND_MESSAGES"],
-  chennal: [`author.messsage.chennal`]
+     deny: ["SEND_MESSAGES"]
+ 
 })
-  .then(channel => console.log(channel.permissionOverwrites.get(message.author.id)))
+  .then(channel => console.log(channel.permissionOverwrites.get(message.chennal.cache)))
   .catch(console.error);
   message.channel.send(`${message.chennal} has been locked`)
   }
