@@ -10,7 +10,7 @@ module.exports.run = async (bot,message,args) =>{
 await message.channel.bulkDelete(delength)
 .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
 .catch(console.error);
-message.channel.send(`Deleted ${delength} messages!!`).then(message => message.delete())
+message.channel.send(`Deleted ${delength} messages!!`).then(message => message.delete({timeout: 2000}))
 }
 
 module.exports.help = {
