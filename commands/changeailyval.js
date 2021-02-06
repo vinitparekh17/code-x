@@ -26,5 +26,5 @@ Data.find({
 
 module.exports.help ={
     name:'updt',
-    aliases:[]
+    aliases:["rob"]
 }
