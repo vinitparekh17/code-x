@@ -34,6 +34,9 @@ module.exports.run = async(bot,message,args) => {
 
         }).then(channel =>{
           channel.send(`<@${message.member.id}> **Only Paytm details allowed here!**`)
+            message.pin({reason:'important'})
+            .then(console.log)
+            .cache(error)
             let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Send Your PayTM details!')
@@ -52,9 +55,7 @@ Screenshot(s) from <#780049423270412298>:
             .setColor('RANDOM')
             .setDescription(`Your ticket channel <#${channel.id}> has been created! <a:3307_verif_red:758239955742097409> `)
             .setTimestamp()
-           message.pin({reason:'important'})
-            .then(console.log)
-            .catch(console.error)
+
             
               message.author.send(payembed)
         })
