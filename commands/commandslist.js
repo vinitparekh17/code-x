@@ -37,7 +37,7 @@ module.exports.run = (bot,message,args) => {
         sem.addField('Payment and Support(1)' , 'Payment and Support commands')
         sem.addField('Moderation(2)' , 'Commands exclusive to mos')
         sem.addField('Miscellaneous(3)' , 'Misc commands')
-        sem.setDescription('Use ur command like this: +commands 2')
+        sem.setDescription('Use ur command like this: !commands 2')
     }
     message.channel.send(sem)
 }
