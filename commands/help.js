@@ -34,7 +34,7 @@ module.exports.run = async(bot,message,args) => {
 
         }).then(channel =>{
           channel.send(`<@${message.member.id}> **Only Paytm details allowed here!**`)
-            message.pin({reason:'important'})
+            message.bot.pin({reason:'important'})
             .then(console.log)
             .cache(error)
             let sembed = new Discord.MessageEmbed()
