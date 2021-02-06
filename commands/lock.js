@@ -9,7 +9,7 @@ module.exports.run = async(bot,message,args) => {
      deny: ["SEND_MESSAGES"]
  
 })
-  .then(channel => console.log(channel.permissionOverwrites.get(message.chennal)))
+  .then(channel => console.log(channel.permissionOverwrites.get(message.chennal.get)))
   .catch(console.error);
   message.channel.send(`${message.chennal} has been locked`)
   }
