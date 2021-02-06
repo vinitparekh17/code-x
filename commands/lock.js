@@ -9,6 +9,9 @@ message.channel.overwritePermission: [
    id: message.guild.id,
    deny: ['SEND_MESSAGES'],
   },
+ 
+ 
+ 
  ]
   message.channel.send(`${message.chennal} has been locked`)
   }
