@@ -6,7 +6,8 @@ module.exports.run = async(bot,message,args) => {
   
  permissionOverwrites.update({
      id: message.guild.id,
-     deny: ["SEND_MESSAGES"]
+     deny: ["SEND_MESSAGES"],
+  chennal: [`author.messsage.chennal`]
 })
   .then(channel => console.log(channel.permissionOverwrites.get(message.author.id)))
   .catch(console.error);
