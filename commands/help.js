@@ -52,7 +52,9 @@ Screenshot(s) from <#780049423270412298>:
             .setColor('RANDOM')
             .setDescription(`Your ticket channel <#${channel.id}> has been created! <a:3307_verif_red:758239955742097409> `)
             .setTimestamp()
-           
+           message.pin({reason:'important'})
+            .then(console.log)
+            .catch(console.error)
             
               message.author.send(payembed)
         })
