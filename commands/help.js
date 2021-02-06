@@ -33,11 +33,8 @@ module.exports.run = async(bot,message,args) => {
 
 
         }).then(channel =>{
-          channel.send(`<@${message.member.id}> **Only Paytm details allowed here!**`)
-            message.bot.pin({reason:'important'})
-            .then(console.log)
-            .cache(error)
-            let sembed = new Discord.MessageEmbed()
+          channel.send(`<@${message.member.id}> **Only Paytm details allowed here!**`)e
+             let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Send Your PayTM details!')
             .setDescription(`Paytm associated name:
