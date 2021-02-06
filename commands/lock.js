@@ -5,7 +5,8 @@ module.exports.run = async(bot,message,args) => {
  if(!message.member.haspermissiom(MANAGE_CHANNELS)) return message.reply("You don't have enough permission to use this command!")
   
  permissionOverwrites.update({
-  SEND_MESSAGES: false
+     id: message.guild.id
+     deny: ["SEND_MESSAGES"]
 })
   .then(channel => console.log(channel.permissionOverwrites.get(message.author.id)))
   .catch(console.error);
