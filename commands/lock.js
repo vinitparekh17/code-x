@@ -5,7 +5,7 @@ module.exports.run = async (bot,message,args) => {
   if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('Missing **"MANAGE CHANNEL"** permission');
   
   const role = message.guild.roles.cache.get('794899914437951488');
-  let lockChannel = message.mention.channel.first() || message.guild.channel.cache.get(args[0]);
+  let lockChannel = message.mention.channel.first() || message.guild.channels.cache.get(args[0]);
   if(!lockChannel) lockChannel = message.channel;
   
   await lockChannel.updateOverwrite(role, {
