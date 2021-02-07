@@ -4,7 +4,7 @@ module.exports.run = async (bot,message,args) =>{
     delength = args[0]
     if(!delength || delength == 0){
         message.channel.send("I can't delete 0 messages,u mofo")
-    if(!delength || delength < 2 || > 100){
+    if(!delength || delength < 2 || delength > 100){
         message.channel.send("Please specify a number between 2 and 100");
     if(!Number.isInteger(delength)) return message.channel.send('This is not a valid number!');
     if(isNaN(delenghth)) return message.channel.send('Plz, provide valid number');
