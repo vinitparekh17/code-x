@@ -132,7 +132,10 @@ bot.on ("message"  , async message  =>  {
 
         message.react('✅');
         message.channel.send(`<@${message.author.id}> Pass info has been given in your dm!`)
-
+wmbd = new Discord.MessageEmbed()
+ .setTitle(`Tests joined the server`)setColo
+ .setColor(`RANDOM')
+ .setDescription("Hello")
         message.author.send("https://forms.gle/6sQ4hhZmuYDwXegj8  ye lo beta,yaha jaake apply karo")
 
         bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
