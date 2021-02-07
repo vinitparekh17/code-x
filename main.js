@@ -136,7 +136,7 @@ wmbd = new Discord.MessageEmbed()
  .setTitle(`Tests joined the server`)setColo
  .setColor(`RANDOM')
  .setDescription("Hello")
-        message.author.send("https://forms.gle/6sQ4hhZmuYDwXegj8  ye lo beta,yaha jaake apply karo")
+        message.author.send(wmbd)
 
         bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
         bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
