@@ -12,8 +12,9 @@ module.exports.run = async (bot,message,args) => {
     SEND_MESSAGES: deny
   }) .catch(err => console.log(err));
   message.channel.send('Channel has been **Locked**')
+      }
+
  }
-}
 
 module.exports.help = {
     name: "lock",
