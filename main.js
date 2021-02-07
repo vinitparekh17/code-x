@@ -131,13 +131,14 @@ bot.on ("message"  , async message  =>  {
     if (message.content.startsWith(prefix + "passinfo")){
 
         message.react('✅');
-        message.channel.send(`<@${message.author.id}> Pass info has been given in your dm!`)
+        message.channel.send(`<@${message.author.id}> Pass info has been given in your dm!`){
 wmbd = new Discord.MessageEmbed()
  .setTitle(`Tests joined the server`)
  .setColor(`RANDOM')
  .setDescription("Hello")
  .setTimestamp()
         message.author.send(wmbd)
+};
 
         bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
         bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
