@@ -11,10 +11,10 @@ module.exports.run = async (bot,message,args) => {
   await lockChannel.updateOverwrite(role, {
     SEND_MESSAGES: true
   }) .catch(err => console.log(err));
-  const lockembed = new Discord.MessageEmbed()
+  const unlockembed = new Discord.MessageEmbed()
   .setColor('#00FF00')
   .setDescription(`<a:GG_true3:758699876858462258> <#${message.channel.id}> has been unlocked!`)
-  message.channel.send(lockembed)
+  message.channel.send(unlockembed)
 
   }
 
