@@ -4,6 +4,8 @@ module.exports.run = async (bot,message,args) =>{
     delength = args[0]
     if(!delength || delength == 0){
         message.channel.send("I can't delete 0 messages,u mofo")
+    if(!delength || delength < 2 || > 100){
+        message.channel.send("Please specify a number between 2 and 100")
         return 
      } 
 
