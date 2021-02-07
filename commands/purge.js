@@ -7,7 +7,7 @@ module.exports.run = async (bot,message,args) =>{
         return 
      } 
 
-await message.channel.bulkDelete(fatched)
+await message.channel.bulkDelete(fetched)
 .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
 .catch(console.error);
 message.channel.send(`Deleted ``${messages.size}`` messages!!`).then(message => message.delete({timeout: 2000}))
