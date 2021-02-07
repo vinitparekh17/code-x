@@ -12,7 +12,7 @@ module.exports.run = async (bot,message,args) => {
     SEND_MESSAGES: false
   }) .catch(err => console.log(err));
   let lockembed = new Discord.MessgeEmbed()
-  .setTitle:()
+  .setTitle:(' ')
   .setColor:('#00FF00')
   .setDiscription:(`<a:ac_loading:806430327924457492> <#${message.channel.id}> has been locked!`)
   message.channel.send(lockembed)
