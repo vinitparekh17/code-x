@@ -11,7 +11,11 @@ module.exports.run = async (bot,message,args) => {
   await lockChannel.updateOverwrite(role, {
     SEND_MESSAGES: false
   }) .catch(err => console.log(err));
-  message.channel.send(`<a:ac_loading:806430327924457492> **<#${message.channel.id}> has been locked**`)
+  let lockembed = new Discord.MessgeEmbed()
+  .settitle:()
+  .setColor:('#00FF00')
+  .setdiscription:(`<a:ac_loading:806430327924457492> <#${message.channel.id}> has been locked!`)
+  message.channel.send(lockembed)
       
 }
 
