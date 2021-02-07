@@ -7,7 +7,7 @@ module.exports.run = async (bot,message,args) =>{
     if(!delength || delength < 2 || delength > 100){
         message.channel.send("Please specify a number between 2 and 100")
         return
-     }
+    }
 
 await message.channel.bulkDelete(delength)
 .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
