@@ -9,7 +9,7 @@ module.exports.run = async (bot,message,args) => {
   if(!lockChannel) lockChannel = message.channel;
   
   await lockChannel.updateOverwrite(role, {
-    SEND_MESSAGES: deny
+    SEND_MESSAGES: false
   }) .catch(err => console.log(err));
   message.channel.send('Channel has been **Locked**')
       
