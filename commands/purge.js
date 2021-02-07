@@ -9,7 +9,7 @@ module.exports.run = async (bot,message,args) =>{
     if(!Number.isInteger(delength)) return message.channel.send("This is not a valid number!");
     if(isNaN(delength)) return message.channel.send("Plz, provide valid number")
     return
-        }
+     }
 
 await message.channel.bulkDelete(delength)
 .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
