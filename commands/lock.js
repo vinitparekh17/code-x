@@ -15,7 +15,7 @@ module.exports.run = async (bot,message,args) => {
  }
 }
 
-module.exports.help {
-    name: "lock"
+module.exports.help = {
+    name: "lock",
     aliases: ["lock"]
   }
