@@ -131,7 +131,8 @@ bot.on ("message"  , async message  =>  {
     if (message.content.startsWith(prefix + "passinfo")){
 
         message.react('✅');
-        message.channel.send(`<@${message.author.id}> Pass info has been given in your dm!`){
+        message.channel.send(`<@${message.author.id}> Pass info has been given in your dm!`)
+        {
 wmbd = new Discord.MessageEmbed()
  .setTitle(`Tests joined the server`)
  .setColor(`RANDOM')
