@@ -47,7 +47,7 @@ bot.user.setStatus('dnd')
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ '!ticket for Payment' , ' !help for list of commands' ]
+        let activities = [ '!ticket for Payment' , '!help for list of commands' ]
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
@@ -128,10 +128,10 @@ bot.on ("message"  , async message  =>  {
 
 
     }
-    if (message.content.startsWith(prefix + "apply")){
+    if (message.content.startsWith(prefix + "passinfo")){
 
         message.react('✅');
-        message.channel.send("Application form has been sent to ur dms!")
+        message.channel.send(`<@${message.author.id}> Pass info has been given in your dm!`)
 
         message.author.send("https://forms.gle/6sQ4hhZmuYDwXegj8  ye lo beta,yaha jaake apply karo")
 
