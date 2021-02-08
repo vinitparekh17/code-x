@@ -107,7 +107,7 @@ bot.on ("message"  , async message  =>  {
 
          if(sendmessage.length == 0){
 
-             message.channel.say('Oye kya bhej raha hai! <:SaaleNoob:717419994820116530>')
+             message.channel.say('Oye kya bhej raha hai!')
 
 
          }
@@ -135,14 +135,13 @@ let args[3] = d
 let args[4] = e
 
          }
-        message.channel.send(` **Aqua Champion Solo SD #{args[5]} **
+        message.channel.send(` **Aqua Champion Solo SD**
 Rank 1 : a | 50₹
 Rank 2 : b | 50₹
 Rank 3 : c | 50₹
 Rank 4 : d | 50₹
 Rank 5 : e | 50₹
---------------------------------`)
-       message.channel.send(winmessage)
+-------------------------------- `)
      }
 
      
