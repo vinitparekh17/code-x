@@ -118,6 +118,16 @@ bot.on ("message"  , async message  =>  {
 
 
      }
+      if(message.content.startWith(prefix + "win50")){
+            message.channel.send(` **Aqua Champion Solo SD #{args[5]} **
+Rank 1 : args[0] | 50₹
+Rank 2 : args[1] | 50₹
+Rank 3 : args[2] | 50₹
+Rank 4 : args[3] | 50₹
+Rank 5 : args[4] | 50₹
+________________________`)
+
+}
 
      
     
