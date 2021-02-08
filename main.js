@@ -124,7 +124,7 @@ bot.on ("message"  , async message  =>  {
 
         winmessage = message.content.slice(5);
 
-if(winmessage.lenght == 0 {
+if(winmessage.lenght == 0){
 
         message.channel.say('mention someone, fool')
 
