@@ -4,8 +4,6 @@ module.exports.run = async (bot,message,args)=>{
   if(!message.member.hasPermission("ADMINISTRATION")) return message.channel.send('Teri aukat nhi h ye command use karne ki');
 if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-const args = message.content.slice(prefix.length).trim().split(' ');
-const command = args.shift().toLowerCase();
   if(args[0] == null) message.channel.send("Spacify someone as a winner");
 
 else if (command === 'win50') {
