@@ -9,6 +9,7 @@ const avbd = Discord.messageEmbed()
   message.channel.send(avbd);
  
 }
+
 module.exports.help = {
 name: "avatar",
 aliases: ["av"]
