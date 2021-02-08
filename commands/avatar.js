@@ -5,7 +5,7 @@ const Discord = require('discord.js')
 let mentionedMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 if (!mentionedMember) mentionedMember = message.member;
 
-const avbd = new Discord.messageEmbed()
+const avbd = new Discord.MessageEmbed()
 .setTitle(mentionedMember.user.tag + "'s Avatar!")
 .setImage(mentionedMember.usar.displayAvatarURL());
 
