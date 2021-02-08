@@ -128,14 +128,19 @@ if(winmessage.lenght == 0){
 
         message.channel.say('mention someone, fool')
 
+let args[0] = a
+let args[1] = b
+let args[2] = c
+let args[3] = d
+let args[4] = e
 
          }
         message.channel.send(` **Aqua Champion Solo SD #{args[5]} **
-Rank 1 : args[0] | 50₹
-Rank 2 : args[1] | 50₹
-Rank 3 : args[2] | 50₹
-Rank 4 : args[3] | 50₹
-Rank 5 : args[4] | 50₹
+Rank 1 : a | 50₹
+Rank 2 : b | 50₹
+Rank 3 : c | 50₹
+Rank 4 : d | 50₹
+Rank 5 : e | 50₹
 --------------------------------`)
        message.channel.send(winmessage)
      }
