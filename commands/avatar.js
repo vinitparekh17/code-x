@@ -1,6 +1,6 @@
 module.exports.run = async (bot,message,args) => {
 let mentionedMember = message.mentiones.members.first() || message.guild.members.cache.get(args[0]);
-if (!mentionedMember) = mentionedMember = message.member;
+if (!mentionedMember) mentionedMember = message.member;
 
 async run(client, message, args) {
 const avbd = Discord.messageEmbed()
