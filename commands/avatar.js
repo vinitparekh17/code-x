@@ -7,7 +7,7 @@ if (!mentionedMember) mentionedMember = message.member;
 
 const avbd = new Discord.MessageEmbed()
 .setTitle(mentionedMember.user.tag + "'s Avatar!")
-.setImage(mentionedMember.usar.displayAvatarURL());
+.setImage(mentionedMember.user.displayAvatarURL());
 
   message.channel.send(avbd);
  
