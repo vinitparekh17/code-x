@@ -253,7 +253,6 @@ bot.on('guildMemberAdd' , member =>
  wmbd = new Discord.MessageEmbed()
  .setTitle(`${member.user.username} has joined the server`)
  .setColor('RANDOM')
- .setDescription(`<@${member.user.id}>`)
  .setTimestamp()
  .setImage('https://cdn.discordapp.com/attachments/652183126055059469/672054114993176586/welcome-dribbble.gif')
  
