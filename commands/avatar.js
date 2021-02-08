@@ -1,7 +1,7 @@
 
 module.exports.run = async (bot,message,args) => {
 const ms = require('ms')
-const Discord = require('Discord.js')
+const Discord = require('discord.js')
 let mentionedMember = message.mentiones.members.first() || message.guild.member.cache.get(args[0]);
 if (!mentionedMember) mentionedMember = message.member;
 
