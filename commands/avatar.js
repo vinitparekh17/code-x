@@ -14,7 +14,7 @@ const avbd = new Discord.messageEmbed()
 }
 
 module.exports.help = {
-name: "avatar",
-aliases: ["av"]
+    name: "avatar",
+    aliases: ["av"]
 
 }
