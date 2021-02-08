@@ -118,7 +118,7 @@ bot.on ("message"  , async message  =>  {
 
 
      }
-      if(message.content.startWith(prefix + "win50")){
+      if(message.content.startsWith(prefix + "win50")){
          
           message.delete();
 
