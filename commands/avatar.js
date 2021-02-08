@@ -2,7 +2,7 @@
 module.exports.run = async (bot,message,args) => {
 const ms = require('ms')
 const Discord = require('discord.js')
-let mentionedMember = message.mentions.member.first() || message.guild.member.cache.get(args[0]);
+let mentionedMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 if (!mentionedMember) mentionedMember = message.member;
 
 const avbd = Discord.messageEmbed()
