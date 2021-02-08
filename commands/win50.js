@@ -12,4 +12,11 @@ Rank 4 : args[3] | 50₹
 Rank 5 : args[4] | 50₹
 
 ________________________')
+
+}
+
+module.exports.help = {
+    name:"win50",
+    aliases:["win50"]
+}
     
