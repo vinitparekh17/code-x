@@ -137,7 +137,7 @@ Rank 3 : args[2] | 50₹
 Rank 4 : args[3] | 50₹
 Rank 5 : args[4] | 50₹
 --------------------------------`)
-
+       message.channel.send(winmessage)
      }
 
      
