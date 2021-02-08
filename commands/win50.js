@@ -8,7 +8,7 @@ else if (command === 'win50') {
 		return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
 	}
 
-message.channel.send(` **Aqua Champion Solo SD #{args[5]} **
+await message.channel.send(` **Aqua Champion Solo SD #{args[5]} **
 
 Rank 1 : args[0] | 50₹
 Rank 2 : args[1] | 50₹
