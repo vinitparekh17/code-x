@@ -119,6 +119,17 @@ bot.on ("message"  , async message  =>  {
 
      }
       if(message.content.startWith(prefix + "win50")){
+         
+          message.delete();
+
+        winmessage = message.content.slice(5);
+
+if(winmessage.lenght == 0 {
+
+        message.channel.say('mention someone, fool')
+
+
+         }
         message.channel.send(` **Aqua Champion Solo SD #{args[5]} **
 Rank 1 : args[0] | 50₹
 Rank 2 : args[1] | 50₹
@@ -127,7 +138,7 @@ Rank 4 : args[3] | 50₹
 Rank 5 : args[4] | 50₹
 --------------------------------`)
 
-}
+     }
 
      
     
