@@ -253,22 +253,12 @@ bot.on('guildMemberAdd' , member =>
  wmbd = new Discord.MessageEmbed()
  .setTitle(`${member.user.username} has joined the server`)
  .setColor('RANDOM')
- .setDescription(`✫▬▬▬✫▬▬▬✫▬▬▬✫▬▬▬✫▬▬▬
-
- <a:hypesquad:779012310504964126>  Welcome <@${member.user.id}> <a:hypesquad:779012310504964126> 
-
-<a:GG_true3:751658895247802429>  Read our server rules from <#751657642660855879>
-
-<a:GG_true3:751658895247802429>  Take your roles from <#726836834541240360>
-
-<a:GG_true3:751658895247802429>  You're ${bot.users.cache.size} member of this Server! <a:donald_clap:750700622830895204> 
-
-✫▬▬▬✫▬▬▬✫▬▬▬✫▬▬▬✫▬▬▬`)
+ .setDescription(<@${member.user.id}>)
  .setTimestamp()
  .setImage('https://cdn.discordapp.com/attachments/652183126055059469/672054114993176586/welcome-dribbble.gif')
  
 
-bot.guilds.cache.get('724858940252487720').channels.cache.get('724859956561444884').send(wmbd)
+bot.guilds.cache.get('577743752542814229').channels.cache.get('806045165922943016').send(wmbd)
 member.send(wmbd)
 
 });
