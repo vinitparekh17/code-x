@@ -54,7 +54,7 @@ bot.user.setStatus('dnd')
        let modroles = ['653115183950200833', '730313466094813225', '551936470458433536', '732818401516453959', '732818652059140127', ]
 
        
-       bot.user.setActivity(activity, { type: "WATCHING"})
+       bot.user.setActivity(activity, { type: "WATCHING"}
     , 5000)
 
 
