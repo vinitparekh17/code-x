@@ -19,7 +19,7 @@ Rank 5 : ${e} `)
 
 }
 
-module.exports.help {
+module.exports.help = {
     name: "winnerlist",
     alias5: ["win50"]
 }
