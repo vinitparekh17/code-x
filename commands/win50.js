@@ -1,7 +1,10 @@
 module.exports.run = async (bot,message,args)=>{
     const Discord = require('discord.js')
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
 if(!member.hasPermission("ADMINISTRATION")) return message.channel.send("You can not use this command");
-if(args[0] == null) message.channel.send("You don't know how to use this command")
+
 
 let a = args[0];
 let b = args[1];
@@ -18,9 +21,7 @@ Rank 3 : ${c}
 Rank 4 : ${d}
 Rank 5 : ${e} `)
 
-const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-
+if(args[0] == null) message.channel.send("You don't know how to use this command")
 }
 
 module.exports.help = {
