@@ -174,19 +174,6 @@ bot.user.setStatus('dnd')
 
     })
 }
-   
-
-    if(message.content.startsWith(prefix + "dev")){
-
-      
-
-
-
-    }
-
-   
-
-})
 
 bot.on('guildMemberAdd' , member => 
 {
