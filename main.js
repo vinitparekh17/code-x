@@ -1,4 +1,4 @@
-const token = "Nzc4Mjg0NzExNDI4MDk2MDAw.X7PwHw.-QN-Lc_o4EKEDKKmfa9zPc-UCiE"
+const token = process.env.token
 const  Discord  = require('discord.js');
 const bot = new Discord.Client({ ws: { intents: ['GUILDS', 'GUILD_MESSAGES','GUILD_MEMBERS','GUILD_PRESENCES'] } });
 
@@ -39,15 +39,15 @@ fs.readdir("./commands/" , (err,files) => {
 })
 
 bot.on("ready", async () => {
-
-
-
+bot.user.setStatus('dnd')
+ .then(console.log)
+    .catch(console.error);
     console.log(  "I am READY!")
 
     setInterval(function() {
         numberomember =`${bot.users.cache.size}`
 
-        let activities = [ `+Dev: BlazingDragon#2021 | Watching ${numberomember} members` ,  '+pd for Payment | +help for list of commands']
+        let activities = [ `Watching ${numberomember} members` ,  '!ticket for Payment | !help for list of commands']
 
        let activity = activities[Math.floor(Math.random()*activities.length)]
 
@@ -61,43 +61,6 @@ bot.on("ready", async () => {
 })
 
 
-
-bot.on ("message"  , async message  =>  {
-    const args = message.content.slice(prefix.length).trim().split(' ');
-    const cmd = args.shift().toLowerCase();
-    let command
-    
-    
-    let pandaemojis = ['686511879459307541' , '707199467446599702' , '707116706262417440' , '707199422387453963' , ]
-
-
-    console.log(message.author.username);
-    console.log(message.content);
-
-    mention = message.mentions.users.first();
-
-    const server = message.guild;
-
-
-      if (message.channel.type === 'dm') {
-
-      if (message.author.bot) return;
-
-         bot.users.cache.get("324442848759906314").send(`${message.author.username}: ${message.content}`);
-         message.author.send("Ight,imma send that to Blazing.My DMs r closed kiddo.If you wanna contact server/tourney support,or get tourney payment,type *+help* inside the Nuclear Plays server.")
-
-    
-    return;}
-
-
-
-      if(message.author.bot){
-          return;
-      }
-
-     
-
-     
 
      if(message.content.startsWith(prefix + "say" )){
 
@@ -128,17 +91,12 @@ bot.on ("message"  , async message  =>  {
 
 
     }
-    if (message.content.startsWith(prefix + "apply")){
+    if (message.content.startsWith(prefix + "payments")){
 
         message.react('✅');
         message.channel.send("Application form has been sent to ur dms!")
 
-        message.author.send("https://forms.gle/6sQ4hhZmuYDwXegj8  ye lo beta,yaha jaake apply karo")
-
-        bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
-        bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
-
-
+        message.author.send("Coming soon...")
 
     }
     if (message.content.startsWith(prefix + "send")){
@@ -159,22 +117,6 @@ bot.on ("message"  , async message  =>  {
     
     }
 
-
-     message.content = message.content.toLowerCase();
-    if(message.content.includes("pandu")){
-
-        let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
-
-        message.react(`${ranpanda}`);
-
-    }
-    if(message.content.includes("panda")){
-
-        let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
-
-        message.react(`${ranpanda}`);
-
-    }
     if(message.content.startsWith(prefix)){
     if (bot.commands.has(cmd))
     command = bot.commands.get(cmd);
