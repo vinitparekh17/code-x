@@ -62,42 +62,6 @@ bot.user.setStatus('dnd')
 
 
 
-bot.on ("message"  , async message  =>  {
-    const args = message.content.slice(prefix.length).trim().split(' ');
-    const cmd = args.shift().toLowerCase();
-    let command
-    
-    
-    let pandaemojis = ['686511879459307541' , '707199467446599702' , '707116706262417440' , '707199422387453963' , ]
-
-
-    console.log(message.author.username);
-    console.log(message.content);
-
-    mention = message.mentions.users.first();
-
-    const server = message.guild;
-
-client.on("message", message => {
-  const args = message.content.split(" ").slice(1);
-
-  if (message.content.startsWith(config.prefix + "eval")) {
-    if(message.author.id !== config.467004231295959040) return;
-    try {
-      const code = args.join(" ");
-      let evaled = eval(code);
-
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-      message.channel.send(clean(evaled), {code:"xl"});
-    } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-  }
-});
-
-
       if (message.channel.type === 'dm') {
 
       if (message.author.bot) return;
