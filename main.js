@@ -55,7 +55,7 @@ bot.user.setStatus('dnd')
 
        
        bot.user.setActivity(activity, { type: "WATCHING"})
-    }, 5000)
+    , 5000)
 
 
 })
