@@ -60,7 +60,7 @@ Screenshot(s) from <#780049423270412298>:
       }
 
     }
-    module.exports.help = {
-        name: "gpgc ticket",
-        aliases: ["GPGC"]
+  module.exports.help = {
+      name: "gpgc-ticket",
+      aliases: ["gpgc"]
     }
