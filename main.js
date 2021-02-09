@@ -58,7 +58,7 @@ bot.user.setStatus('dnd')
     , 5000)
 
 
-})
+}
 
 
      if(message.content.startsWith(prefix + "say" )){
