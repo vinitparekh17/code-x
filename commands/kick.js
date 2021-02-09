@@ -6,7 +6,7 @@ module.exports.run = async (bot,message,args)=>{
         return
 let member = message.mentions.members.first();
 member.kick;
-message.channel.send(`${member.username} has been kicked!`}
+message.channel.send(`${member.username} has been kicked!`)
 
 }
 
