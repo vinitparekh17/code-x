@@ -61,7 +61,42 @@ bot.user.setStatus('dnd')
 })
 
 
+bot.on ("message"  , async message  =>  {
+    const args = message.content.slice(prefix.length).trim().split(' ');
+    const cmd = args.shift().toLowerCase();
+    let command
+    
+    
+    let pandaemojis = ['686511879459307541' , '707199467446599702' , '707116706262417440' , '707199422387453963' , ]
 
+
+    console.log(message.author.username);
+    console.log(message.content);
+
+    mention = message.mentions.users.first();
+
+    const server = message.guild;
+
+
+      if (message.channel.type === 'dm') {
+
+      if (message.author.bot) return;
+
+         bot.users.cache.get("324442848759906314").send(`${message.author.username}: ${message.content}`);
+         message.author.send("Ight,imma send that to Blazing.My DMs r closed kiddo.If you wanna contact server/tourney support,or get tourney payment,type *+help* inside the Nuclear Plays server.")
+
+    
+    return;}
+
+
+
+      if(message.author.bot){
+          return;
+      }
+
+     
+
+     
      if(message.content.startsWith(prefix + "say" )){
 
          message.delete();
