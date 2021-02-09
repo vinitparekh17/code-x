@@ -21,5 +21,5 @@ Rank 5 : ${e} `)
 
 module.exports.help = {
     name: "winnerlist",
-    alias5: ["win50"]
+    aliases: ["win50"]
 }
