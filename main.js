@@ -61,27 +61,6 @@ bot.user.setStatus('dnd')
 })
 
 
-
-      if (message.channel.type === 'dm') {
-
-      if (message.author.bot) return;
-
-         bot.users.cache.get("324442848759906314").send(`${message.author.username}: ${message.content}`);
-         message.author.send("Ight,imma send that to Blazing.My DMs r closed kiddo.If you wanna contact server/tourney support,or get tourney payment,type *+help* inside the Nuclear Plays server.")
-
-    
-    return;}
-
-
-
-      if(message.author.bot){
-          return;
-      }
-
-     
-
-     
-
      if(message.content.startsWith(prefix + "say" )){
 
          message.delete();
@@ -116,7 +95,6 @@ bot.user.setStatus('dnd')
         message.author.send('Coming Soon')
 
         bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
-        bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
 
 
 
@@ -139,22 +117,6 @@ bot.user.setStatus('dnd')
     
     }
 
-
-     message.content = message.content.toLowerCase();
-    if(message.content.includes("pandu")){
-
-        let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
-
-        message.react(`${ranpanda}`);
-
-    }
-    if(message.content.includes("panda")){
-
-        let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
-
-        message.react(`${ranpanda}`);
-
-    }
     if(message.content.startsWith(prefix)){
     if (bot.commands.has(cmd))
     command = bot.commands.get(cmd);
@@ -213,17 +175,6 @@ bot.user.setStatus('dnd')
     })
 }
    
-
-    if(message.content.startsWith(prefix + "dev")){
-
-      
-
-
-
-    }
-
-   
-
 })
 
 bot.on('guildMemberAdd' , member => 
