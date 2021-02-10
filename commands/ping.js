@@ -4,7 +4,7 @@ const pingbd = new Discord.MessageEmbed()
 .setTitle('Ping?')
 .setColor('#FFF500')
 .setDescription(`Pong! ${m.createdTimestamp - message.createdTimestamp}ms`)
-    m.edit(`pingbd`)
+    message.channel.edit(`pingbd`)
 }
 
 module.exports.help = {
