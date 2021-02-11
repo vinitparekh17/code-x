@@ -1,5 +1,5 @@
 module.exports.run = async(bot,message,args) => {
-    if(message.channel.name.startsWith('paytm') || message.channel.name.startsWith('Closed') || message.channel.name.startWith('gpgc')){
+    if(message.channel.name.startsWith('paytm') || message.channel.name.startsWith('Closed') || message.channel.name.startsWith('gpgc')){
 message.channel.send('Deleting channel in 5 seconds...')
        setTimeout(function() {
 message.channel.delete() }, 5000)
