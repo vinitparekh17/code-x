@@ -36,8 +36,8 @@ module.exports.run = async(bot,message,args) => {
           channel.send(`<@${message.member.id}> **Only Paytm details allowed here!**`)
              let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
-            .setTitle('Your Google Play Gift Card will be sent in your Dms!')
-            .setDescription(`Note: Minimum 75₹ is required to create **GPGC**!
+            .setTitle('Your GPGC will be sent in your Dms!')
+            .setDescription(`[`Note: Minimum 75₹ is required to create GPGC!`]
 If you want to stack your prize than inform any mods.
 Screenshot(s) from <#780049423270412298>:
             `)
