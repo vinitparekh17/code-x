@@ -37,9 +37,9 @@ module.exports.run = async(bot,message,args) => {
              let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Your GPGC will be sent in your Dms!')
-            .setDescription('**Note: Minimum 75₹ is required to create GPGC!**
+            .setDescription(`**Note: Minimum 75₹ is required to create GPGC!**
 If you want to stack your prize than inform any mods.
-Screenshot(s) from <#780049423270412298>:')
+Screenshot(s) from <#780049423270412298>:`)
             .setFooter(`Dont't ping unnecessary!`)
             .setThumbnail('https://cdn.discordapp.com/attachments/797089409219821569/808655213203685416/images.jpeg')
             .setImage('https://cdn.discordapp.com/attachments/778218564578574336/779008159100174336/Rainbow.gif')
