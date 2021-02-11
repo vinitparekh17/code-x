@@ -7,7 +7,7 @@ message.channel.delete()
 
 }, 5000)
 
-    else {message.channel.send("This is not ticket channel Noob!")}
+    else{message.channel.send("This is not ticket channel Noob!")}
 
 }
 
