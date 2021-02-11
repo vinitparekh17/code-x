@@ -5,7 +5,7 @@ message.channel.send('Deleting channel in 5 seconds...')
 
 message.channel.delete()
 
-}, 5000)
+}, 5000);
 
     else{message.channel.send("This is not ticket channel Noob!")}
 
