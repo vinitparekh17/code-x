@@ -64,5 +64,5 @@ Screenshot(s) from <#780049423270412298>:
     }
     module.exports.help = {
         name: "paytmdetails",
-        aliases: ["Help" , "ticket" ,"pay" , "payme" , "paisa" , "pd"]
+        aliases: ["ticket"]
     }
