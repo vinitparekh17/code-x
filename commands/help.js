@@ -48,7 +48,7 @@ Screenshot(s) from <#780049423270412298>:
             .setImage('https://cdn.discordapp.com/attachments/778218564578574336/779008159100174336/Rainbow.gif')
             channel.send(sembed)
             let payembed = new Discord.MessageEmbed()
-            .setTitle('Payment/Support thread created!')
+            .setTitle('Payment channel has been created!')
             .setColor('RANDOM')
             .setDescription(`Your ticket <#${channel.id}> has been created! <a:3307_verif_red:758239955742097409> `)
             .setTimestamp()
