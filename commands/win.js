@@ -19,6 +19,6 @@ message.channel.send(embed), message.react('✅');
   }}
 
 module.exports.help = {
-    name = "win",
-    aliases = ["win"]
+    name: "win",
+    aliases: ["win"]
 }
