@@ -12,7 +12,7 @@ const memembed = new Discord.MessageEmbed()
 let msg = await message.channel.send('Fetching you a meme...')
 msg.edit(memembed);
 
- }
+ });
 }
 
 module.exports.help = {
