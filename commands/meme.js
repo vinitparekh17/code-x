@@ -9,7 +9,7 @@ const memembed = new Discord.MessageEmbed()
 .setImage(json.url)
 .setFooter(`${json.subreddit} , ${json.postLink}`);
 
-let msg = await message.channel.send('Fetching you a meme...')
+let msg = await message.channel.send('Fetching you a meme...');
 msg.edit(memembed);
 
  });
