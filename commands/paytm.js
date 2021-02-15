@@ -45,7 +45,7 @@ Screenshot(s) from <#780049423270412298>:
             .setFooter(`Dont't ping unnecessary!`)
             .setThumbnail('https://cdn.discordapp.com/emojis/788686359945674764.png')
             .setImage('https://cdn.discordapp.com/attachments/778218564578574336/779008159100174336/Rainbow.gif')
-            channel.send("`<@${message.member.id}>` **Only Paytm details allowed here!**" , sembed)
+            channel.send(`<@${message.member.id}> **Only Paytm details allowed here!**` , sembed)
             let payembed = new Discord.MessageEmbed()
             .setTitle('Payment channel has been created!')
             .setColor('RANDOM')
