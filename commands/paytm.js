@@ -53,7 +53,7 @@ Screenshot(s) from <#780049423270412298>:
             .setTimestamp()
 
             
-              message.channel.send("<@${message.member.id}> **Only Paytm details allowed here!**" , payembed)
+              channel.send("<@${message.member.id}> **Only Paytm details allowed here!**" , payembed)
         })
 
       }else{
