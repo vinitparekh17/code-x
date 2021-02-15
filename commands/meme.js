@@ -6,11 +6,11 @@ module.exports.run = async (bot,message,args) =>{
 .then(async json => {
 const memembed = new Discord.MessageEmbed()
 .setTitle(json.title)
+.setColor('RANDOM')
 .setImage(json.url)
 .setFooter(`${json.subreddit} , ${json.postLink}`);
 
-let msg = await message.channel.send('Fetching you a meme...');
-msg.edit(memembed);
+let msg = await message.channel.send(memembed);
 
  });
 }
