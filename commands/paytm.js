@@ -33,7 +33,6 @@ module.exports.run = async(bot,message,args) => {
 
 
         }).then(channel =>{
-          channel.send(`<@${message.member.id}> **Only Paytm details allowed here!**`)
              let sembed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Send Your PayTM details!')
@@ -54,7 +53,7 @@ Screenshot(s) from <#780049423270412298>:
             .setTimestamp()
 
             
-              message.channel.send(payembed)
+              message.channel.send("<@${message.member.id}> **Only Paytm details allowed here!**" , payembed)
         })
 
       }else{
