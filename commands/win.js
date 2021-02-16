@@ -10,7 +10,7 @@ const embed = new Discord.MessageEmbed()
 
 .setColor("#00ffff")   
 .setFooter(message.client.user.username, message.client.user.displayAvatarURL());
-message.channel.send("a" , embed), message.react('✅');
+message.channel.send(a , embed), message.react('✅');
 
   }
 
