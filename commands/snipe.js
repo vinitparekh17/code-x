@@ -11,7 +11,7 @@ const embed = new Discord.MessageEmbed()
 .setColor('RANDOM')
 
   message.channel.send(embed);
- }
+ 
 }
 
 module.exports.help = {
