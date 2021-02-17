@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
-module.exports.run = async(client,message,args) => {
-
-const msg = client.snipes.get(message.channel.id);
+module.exports.run = async(bot, message, args) => {
+const msg = bot.snipes.get(message.channel.id);
 if (!msg) return message.channel.send('No deleted message found!');
 
 const embed = new Discord.MessageEmbed()
