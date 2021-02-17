@@ -10,7 +10,7 @@ const embed = new Discord.MessageEmbed()
 .setTimestamp()
 .setColor('RANDOM')
 
-message.channel.send(embed);
+  message.channel.send(embed);
  }
 }
 
