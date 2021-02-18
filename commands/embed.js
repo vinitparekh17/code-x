@@ -1,4 +1,4 @@
-cost Discord = require('discord.js')
+const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
 
         const commands = client.commands.array();
