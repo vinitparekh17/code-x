@@ -1,3 +1,4 @@
+cost Discord = require('discord.js')
 module.exports.run = async(bot, message, args) => {
 
         const commands = client.commands.array();
@@ -181,6 +182,6 @@ module.exports.run = async(bot, message, args) => {
     }
 
 module.exports.help = {
-    name: "help",
-    aliases: ["help"]
+    name: "embed",
+    aliases: ["embed"]
 }
