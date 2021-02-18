@@ -22,7 +22,7 @@ module.exports.run = async(client, message, args) => {
                         errors: ['time'],
                     })
                         .then((collected) => {
-                            embed.setTitle(`${collected.first()}`)
+                            embed.setDescription(`${collected.first()}`)
                             Channel.send(embed).catch(err => message.channel.send(`⚠ **Error:** ${err}`))
                         })
                 })
