@@ -26,6 +26,6 @@ let embed = new Discord.MessageEmbed()
   }
 
 module.exports.help = {
-    name: "server-info"
+    name: "server-info",
     aliases: ["serverinfo", "si"]
 }
