@@ -24,7 +24,6 @@ let embed = new Discord.MessageEmbed()
     .setAuthor(message.author.username, message.author.displayAvatarURL({format: 'png'}))
 		message.channel.send(embed);
   }
-}
 
 module.exports.help = {
     name: "server-info"
