@@ -42,5 +42,5 @@ module.exports.run = async(bot, message, args) => { // Update To Your Handler
 
 module.exports.help = {
     name: "search",
-    aliases: ["search" , "s"]
+    aliases: ["search" , "wiki"]
 }
