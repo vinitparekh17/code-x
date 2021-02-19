@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args);
     this.uses = data.uses : 1;
     this.maxUses = data.max_uses : null;
     this.inviter = this.client.users.add(data.inviter) : author;
-message.chennal.send(`invite.code`)
+message.chennal.send(`${invite.code}`)
   }
 }
 
