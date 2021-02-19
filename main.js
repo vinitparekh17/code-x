@@ -95,8 +95,12 @@ bot.on ("message"  , async message  =>  {
           return;
       }
 
-     
-
+     if(message.content.startsWith(prefix + "invite" )){
+        
+         channel.createInvite()
+  .then(invite => console.log(`Created an invite with a code of ${invite.code}`))
+  .catch(console.error);
+}
      
 
      if(message.content.startsWith(prefix + "say" )){
