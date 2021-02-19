@@ -1,4 +1,3 @@
-Code To Make A Log Channel With MongoDB
 const { Mongoose } = require('mongoose');
 const log = require('../../database/schemas/logSchema');
 const name = 'logchannel';
