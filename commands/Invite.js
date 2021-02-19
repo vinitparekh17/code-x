@@ -5,7 +5,6 @@ module.exports.run = async(bot, message, args);
     this.code = data.code;
     this.presenceCount = 'approximate_presence_count' in data ? data.approximate_presence_count : null;
     this.memberCount = 'approximate_member_count' in data ? data.approximate_member_count : null;
-    this.temporary = data.temporary : null;
     this.maxAge = data.max_age: 5000;
     this.uses = data.uses : 1;
     this.maxUses = data.max_uses : null;
