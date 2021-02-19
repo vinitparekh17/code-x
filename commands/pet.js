@@ -1,4 +1,5 @@
  const Discord = require('discord.js');
+ const petPetGif = require('pet-pet-gif');
 module.exports.run = async (bot, message, args) => {
         const member = message.mentions.members.first() || message.member;
         var Attachment = (message.attachments)
