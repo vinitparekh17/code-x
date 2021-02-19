@@ -97,7 +97,7 @@ bot.on ("message"  , async message  =>  {
 
      if(message.content.startsWith(prefix + "invite" )){
         
-         channel.createInvite()
+         guild.createInvite()
   .then(invite => console.log(`Created an invite with a code of ${invite.code}`))
   .catch(console.error);
 }
