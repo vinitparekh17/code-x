@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 module.exports.run = async(bot, message, args) => { // Update To Your Handler
 
-        const wiki = args.slice().join(' ')
+        const wiki = args.slice().join('')
         if(!wiki) return message.reply('Provide A Query To Search.') // If No Topic Provided To Searched
         const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wiki)}` // From Here BOT Will Search For Searched Topic
 
