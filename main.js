@@ -94,13 +94,6 @@ bot.on ("message"  , async message  =>  {
       if(message.author.bot){
           return;
       }
-
-     if(message.content.startsWith(prefix + "invite" )){
-        
-         guild.createInvite()
-  .then(invite => console.log(`Created an invite with a code of ${invite.code}`))
-  .catch(console.error);
-}
      
 
      if(message.content.startsWith(prefix + "say" )){
