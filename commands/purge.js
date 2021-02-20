@@ -3,7 +3,7 @@ module.exports.run = async (bot,message,args) =>{
     if(!args[0]) return message.channel.send("Specify how many messages u wanna delete u....")
     delength = args[0]
     if(!delength || delength == 0){
-        message.channel.send("I can't delete 0 messages,u mofo")
+        message.reply("I can't delete 0 messages,u mofo")
         return
     }
  await message.channel.bulkDelete(delength)
