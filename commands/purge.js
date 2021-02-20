@@ -4,6 +4,8 @@ module.exports.run = async (bot,message,args) =>{
     delength = args[0]
     if(!delength || delength == 0){
         message.reply("I can't delete 0 messages,u mofo")
+          .then(() => console.log(`Sent a reply to ${message.author.username}`))
+          .catch(console.error);
         return
     }
  await message.channel.bulkDelete(delength)
