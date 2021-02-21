@@ -2,7 +2,7 @@ const command = require('./command')
 const ownerId = '467004231295959040' // my discord user ID
 const channelId = '797089409219821569' // private channel ID
 
-module.exports.run = async(client) => {
+module.exports.run = async(bot, message, args) => {
   command(client, 'eval', (message) => {
     const { member, channel, content } = message
 
