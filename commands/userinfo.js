@@ -36,7 +36,7 @@ module.exports.run = async(message) => {
       )
 
     channel.send(embed)
-  }
+
 }
 
 module.exports.help = {
