@@ -17,7 +17,7 @@ module.exports.run = async(bot, message, args) => {
           value: user.tag,
         },
         {
-          name: 'Is bot',
+          name: 'Is bot?',
           value: user.bot,
         },
         {
