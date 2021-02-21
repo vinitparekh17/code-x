@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
 
     console.log(member)
 
-    const embed = new MessageEmbed()
+    const embed = new Discord.MessageEmbed()
       .setAuthor(`User info for ${user.username}`, user.displayAvatarURL())
       .addFields(
         {
