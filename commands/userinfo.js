@@ -9,8 +9,8 @@ module.exports.run = async(bot, message, args) => {
 
     const embed = new Discord.MessageEmbed()
       .setAuthor(`User info for ${user.username}`, user.displayAvatarURL())
-      .setColor('RANDOM')
-      .setThumbnail(`user.displayAvatarURL()`)
+      .setColor("RANDOM")
+      .setThumbnail(user.displayAvatarURL())
       .addFields(
         {
           name: 'User tag',
