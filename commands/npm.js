@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const process = require('child_process');
-module.exports.run = async(bot, message, args) {
+module.exports.run = async(bot, message, args) => {
           if(message.author.id === 'OWNER_ID') {
 const msg = await message.channel.send(`Please wait, this may take a white.`);
 msg.delete({timeout: 4000});
