@@ -1,6 +1,6 @@
 module.exports.run = async (bot,message,args) =>{
     let target = message.mentions.users.first()
-    if(!target) return message.reply('Kisko marega???')
+    if(!target) return message.reply('Kisko marega? Mention someone to shoot!')
     if(target.id === message.author.id) return message.reply('https://save.org/')
 
     let shoot = ['https://tenor.com/view/rambo-pumped-gunfire-rage-gif-12359697',
