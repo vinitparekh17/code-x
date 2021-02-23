@@ -27,7 +27,7 @@ module.exports.run = async(bot, message, args) => {
 
             if(message.content.toLowerCase() === 'y') {
                 const authorChannel = await message.guild.channels.create(`${challenger.username}-rps`.toLowerCase(), {
-                    type: 'text', 
+                    type: 'text', parent: '813680660921188355' ,
                     permissionOverwrites: [
                         {
                             allow: 'VIEW_CHANNEL',
@@ -40,7 +40,7 @@ module.exports.run = async(bot, message, args) => {
                     ]
                     })
                     const targetChannel = await message.guild.channels.create(`${target.user.username}-rps`.toLowerCase(), {
-                        type: 'text', 
+                        type: 'text', parent: '813680660921188355' ,
                         permissionOverwrites: [
                             {
                                 deny: 'VIEW_CHANNEL',
