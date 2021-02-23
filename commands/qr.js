@@ -5,8 +5,7 @@ module.exports.run = async(bot, message, args) => {
     let link = `http://api.qrserver.com/v1/create-qr-code/?data=${weblink}&size=200x200`
 
           // Input Checking
-          if (!weblink) return message.channel.send('Please give me a link to turn into a QR-Code')
-          if (require('is-url')(weblink)) {
+          if (!weblink) return message.channel.send('Please give me a link to turn into a QR-Code') {
             const attachment = new MessageAttachment(link, 'qrcode.png');
             const embed = new Discord.MessageEmbed()
               .setTitle(`QR-Code has been Generated!`)
