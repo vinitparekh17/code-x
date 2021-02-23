@@ -1,5 +1,4 @@
-
-const { MessageEmbed } = require('discord.js') // npm i discord.js
+const Discord = require('discord.js') // npm i discord.js
 const fetch = require('node-fetch') // npm i node-fetch
 
 module.exports.run = async(bot, message, args) => { // Update To Your Handler
@@ -18,7 +17,7 @@ module.exports.run = async(bot, message, args) => { // Update To Your Handler
 
         try {
             if(response.type === 'disambiguation') { // If Their Are Many Results With Same Searched Topic
-                const embed = new MessageEmbed()
+                const embed = new Discord.MessageEmbed()
                 .setColor('RANDOM')
                 .setTitle(response.title) // Title Of Topic
                 .setURL(response.content_urls.desktop.page) // URL Of Searched Topic
