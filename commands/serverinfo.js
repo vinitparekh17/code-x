@@ -17,7 +17,7 @@ const region = {
     "southafrica": "South Africa :flag_za:"
 };
 
-module.exports.run = async function({client, message}) {
+module.exports.run = async(bot, message) => {
         setCooldown(client, this, message)
 
         const titleCase = str => {
