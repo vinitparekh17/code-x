@@ -3,7 +3,7 @@ const fetch = require('node-fetch') // npm i node-fetch
 
 module.exports.run = async(bot, message, args) => { // Update To Your Handler
 
-        const wiki = message.content.slice.split(' ');
+        const wiki = args.join(" ");
         if(!wiki) return message.reply('Provide A Query To Search.') // If No Topic Provided To Searched
         const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wiki)}` // From Here BOT Will Search For Searched Topic
 
