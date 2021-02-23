@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
-if message.member.hasPermission('MANAGE_CHANNELS') return message.reply('You don't have enough permission to use this command!');
+if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply('You don't have enough permission to use this command!');
 
 message.channel.clone().then((ch) => {
     ch.setParent(message.channel.parent.id);
