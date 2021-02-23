@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
           // Input Checking
           if (!weblink) return message.channel.send('Please give me a link to turn into a QR-Code')
             const attachment = new MessageAttachment(link, 'qrcode.png');
-            const embed = new Discord.MessageEmbed() => {
+            const embed = new Discord.MessageEmbed() {
               .setTitle(`QR-Code has been Generated!`)
               .attachFiles(attachment)
               .setColor('BLUE')
