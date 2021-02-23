@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
-if (!message.author.id !== '467004231295959040') return;
+if (message.author.id !== '467004231295959040') return;
 
 const code = args.join(" ");
 if(!code) return message.reply("leasee provide code to execute");
