@@ -61,7 +61,6 @@ module.exports.run = async(bot, message) => {
             )
         message.channel.send(embed)
     }
-}
 
 module.exports.help = {
     name: "serverinfo",
