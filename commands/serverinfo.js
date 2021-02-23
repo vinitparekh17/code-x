@@ -60,7 +60,7 @@ module.exports.run = async(bot, message) => {
                 { name: "Server ID", value: `${message.guild.id}`, inline: true }
             )
         message.channel.send(embed)
-    }
+ }
 
 module.exports.help = {
     name: "serverinfo",
