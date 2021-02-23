@@ -17,15 +17,15 @@ module.exports.run = async(bot, message, args) => {
         let filter = m => m.author.id === target.id
 
 
-        message.channel.send(`${target}, do you want to go against ${message.author} in rps?\nRespond with **y** or **n**`)
+        message.channel.send(`${target}, do you want to go against ${message.author} in rps?\nRespond with **yes** or **no**`)
         message.channel.awaitMessages(filter, {
             max: 1,
-            time: 10000,
+            time: 20000,
             errors: ['time'], 
         }).then(async message => {
             message = message.first()
 
-            if(message.content.toLowerCase() === 'y') {
+            if(message.content.toLowerCase() === 'yes') {
                 const authorChannel = await message.guild.channels.create(`${challenger.username}-rps`.toLowerCase(), {
                     type: 'text', parent: '813680660921188355' ,
                     permissionOverwrites: [
