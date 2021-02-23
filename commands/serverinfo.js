@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const moment = require("moment");
+const moment = require('moment');
 
 const region = {
     "brazil": "Brazil :flag_br:",
