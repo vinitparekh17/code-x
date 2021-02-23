@@ -192,7 +192,7 @@ module.exports.run = async(bot, message, args) => {
                         })
         
 
-            } else if(message.content.toLowerCase() === 'n') {
+            } else if(message.content.toLowerCase() === 'no') {
                 message.channel.send(`${message.author} has turned down the challenge.`)
             } else {
                 message.channel.send('Invalid response.')
