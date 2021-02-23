@@ -5,7 +5,7 @@ if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send
 
 message.channel.clone().then((ch) => {
     ch.setParent(message.channel.parent.id);
-    ch.setPosition(message.channsl.position);
+    ch.setPosition(message.channel.position);
     message.channel.delete();
 
 ch.send('This channel has been nuked! https://c.tenor.com/SzfO_CqZSRwAAAAM/chicken-chicken-bro.gif ')
