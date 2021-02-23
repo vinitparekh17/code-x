@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const { CustomEmbed, setCooldown } = require('../../utils/utils');
 const moment = require("moment");
 
@@ -17,10 +18,8 @@ const region = {
     "southafrica": "South Africa :flag_za:"
 };
 
-module.exports.run = async(bot, message) => {
-        setCooldown(client, this, message)
-
-        const titleCase = str => {
+module.exports.run = async(bot, message, args) => {
+            const titleCase = str => {
             return str.toLowerCase().replace(/_/g, " ").split(" ")
                       .map(word => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
                       .join(" ")
