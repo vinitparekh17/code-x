@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = async(bot, message, args) {
+module.exports.run = async(bot, message, args) => {
 
     let weblink = (args[0])
     let link = `http://api.qrserver.com/v1/create-qr-code/?data=${weblink}&size=200x200`
