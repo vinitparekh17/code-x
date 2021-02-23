@@ -12,7 +12,7 @@ if (typeof result !== "string") {
   output = inspect(result);
   }
   
-  message.channel.send('output, { code: "js"}); } catch (error) {
+  message.channel.send('output, { code: "js" }); } catch (error) {
   console.log(error);
   message.channel.send("Evaluated code is too long to display!");
   }
