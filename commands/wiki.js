@@ -1,7 +1,8 @@
+
 const { MessageEmbed } = require('discord.js') // npm i discord.js
 const fetch = require('node-fetch') // npm i node-fetch
 
-module.exports.run = async(message, args, client) => { // Update To Your Handler
+module.exports.run = async(bot, message, args) => { // Update To Your Handler
 
         const wiki = args.slice().join(' ');
         if(!wiki) return message.reply('Provide A Query To Search.') // If No Topic Provided To Searched
