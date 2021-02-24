@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
 
     let days = Math.floor(bot.uptime / 86400000);
