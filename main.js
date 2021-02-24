@@ -130,7 +130,7 @@ bot.on("message", message => {
       message.channel.send(output, {code:"js"});
     } catch (err) {
       console.log(err);
-      message.reply(`Error`);
+      message.channel.send('Error occurred!');
     }
   }
 });
