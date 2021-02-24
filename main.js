@@ -127,10 +127,10 @@ bot.on("message", message => {
       if (typeof evaled !== "string")
         evaled = require("util").inspect(evaled);
 
-      message.channel.send(clean(evaled), {code:"xl"});
+      message.channel.send(clean(evaled), {code:"js"});
     } catch (err) {
       console.log(err);
-      message.channel.send(`\`\`\`Executed code is more then 2000 characters\n\`\`\``);
+      message.reply(`Error`);
     }
   }
 });
