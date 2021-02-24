@@ -124,10 +124,10 @@ bot.on("message", message => {
       const code = args.join(" ");
       let evaled = eval(code);
 
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
+      if (typeof evaled !== "string") {
+        output = inspect(evaled);
 
-      message.channel.send(evaled, {code:"js"});
+      message.channel.send(output, {code:"js"});
     } catch (err) {
       console.log(err);
       message.reply(`Error`);
