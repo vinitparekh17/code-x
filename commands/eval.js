@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = async(bot, message, args) => {
+module.exports.run = async(bot, message) => {
 const args = message.content.split(" ").slice(1);
 
   if (message.content.startsWith(config.prefix + "eval")) {
