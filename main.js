@@ -127,7 +127,7 @@ bot.on("message", message => {
       if (typeof evaled !== "string")
         evaled = require("util").inspect(evaled);
 
-      message.channel.send(clean(evaled), {code:"js"});
+      message.channel.send(evaled, {code:"js"});
     } catch (err) {
       console.log(err);
       message.reply(`Error`);
