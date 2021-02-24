@@ -119,18 +119,17 @@ bot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 
   if (message.content.startsWith(prefix + "eval")) {
-    if(message.author.id !== '467004231295959040') return;
+    if(message.author.id !== config.ownerID) return;
     try {
       const code = args.join(" ");
       let evaled = eval(code);
 
-      if (typeof evaled !== "string") {
-        output = inspect(evaled);
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
 
-      message.channel.send(output, {code:"js"});
+      message.channel.send((evaled), {code:"xl"});
     } catch (err) {
-      console.log(err);
-      message.channel.send('Error occurred!');
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${(err)}\n\`\`\``);
     }
   }
 });
