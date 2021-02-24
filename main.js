@@ -129,7 +129,8 @@ bot.on("message", message => {
 
       message.channel.send(clean(evaled), {code:"xl"});
     } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+      console.log(err);
+      message.channel.send("Executed code is more then 2000 characters");
     }
   }
 });
