@@ -1,23 +1,22 @@
 const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
-if (message.author.id !== '467004231295959040') return;
+const args = message.content.split(" ").slice(1);
 
-const code = args.join(" ");
-if(!code) return message.reply("leasee provide code to execute");
+  if (message.content.startsWith(config.prefix + "eval")) {
+    if(message.author.id !== config.ownerID) return;
+    try {
+      const code = args.join(" ");
+      let evaled = eval(code);
 
-try{
-const result = await eval(code);
-let output = result;
-if (typeof result !== "string") {
-  output = inspect(result);
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+
+      message.channel.send(clean(evaled), {code:"xl"});
+    } catch (err) {
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    }
   }
-  
-  message.channel.send(output, { code: "js" }); 
-  } catch(error) {
-  console.log(error);
-  message.channel.send("Evaluated code is too long to display!");
-  }
-  }
+}
   
   module.exports.help = {
       name: "eval",
