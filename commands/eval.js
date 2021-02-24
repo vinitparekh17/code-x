@@ -13,7 +13,7 @@ if (typeof result !== "string") {
   }
   
   message.channel.send(output, { code: "js" }); 
-  } catch (error) {
+  } catch(error) {
   console.log(error);
   message.channel.send("Evaluated code is too long to display!");
   }
