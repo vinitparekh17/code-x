@@ -118,8 +118,8 @@ bot.on ("message"  , async message  =>  {
 bot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 
-  if (message.content.startsWith(config.prefix + "eval")) {
-    if(message.author.id !== config.ownerID) return;
+  if (message.content.startsWith(prefix + "eval")) {
+    if(message.author.id !== '467004231295959040') return;
     try {
       const code = args.join(" ");
       let evaled = eval(code);
