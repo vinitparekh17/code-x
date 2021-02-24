@@ -130,7 +130,7 @@ bot.on("message", message => {
       message.channel.send(clean(evaled), {code:"xl"});
     } catch (err) {
       console.log(err);
-      message.channel.send("Executed code is more then 2000 characters");
+      message.channel.send(`\`\`\`Executed code is more then 2000 characters\n\`\`\``);
     }
   }
 });
