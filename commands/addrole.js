@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
 const targetUser = message.mentions.users.first();
-if(!targeteduser) {
+if(!targetUser) {
 message.reply('Plesse mention someone to give role')
 return
 }
