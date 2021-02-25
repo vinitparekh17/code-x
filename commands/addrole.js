@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const ms = require('ms');
 module.exports.run = async(bot, message, args) => {
 if(!message.member.hasPermission("ADMINISTRATION")) return message.reply(`You don't have enough perms to run this command`)
-const targetUser = message.mentions.users.first();
-if(!targetUser) {
+const member = message.mentions.users.first() || message.guild.members.fatch(args[0]);
+if(!member) {
 message.reply('Plesse mention someone to give role')
 return
 }
@@ -25,7 +25,7 @@ member.roles.add(role)
 
 const roled = new Discord.MessageEmbed()
 
-.setTitle(`**${role.name}** added to **${targetUser.user.tag}** `)
+.setTitle(`**${role.name}** added to **${member.user.tag}** `)
 .setColor("#00FFFFF")
 message.channel.send(roled)
 
