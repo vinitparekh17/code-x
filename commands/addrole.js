@@ -13,7 +13,7 @@ const roleName = args.join(' ')
 const { guild } = message
 
 const role = guild.roles.cache.find((role) => {
-    role.name == roleName
+    role.name === roleName
 })
 if(!role) {
     message.reply(`There is no role called **${roleName}** !`)
