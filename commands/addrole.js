@@ -26,8 +26,10 @@ member.roles.add(role)
 const roled = new Discord.MessageEmbed()
 
 .setTitle(`**${role.name}** added to **${targetUser.user.tag}** `)
-.setColor(`#00FFFFF`)
+.setColor("#00FFFFF")
 message.channel.send(roled)
+
+}
 
 module.exports.help = {
     name: "addrole",
