@@ -20,7 +20,7 @@ if(!role) {
     message.reply(`There is no role called **${roleName}** !`)
     return
 }
-const member = guild.members.cache.get(targetUser.id)
+const user = guild.members.cache.get(member.id)
 member.roles.add(role)
 
 const roled = new Discord.MessageEmbed()
