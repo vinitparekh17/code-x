@@ -23,8 +23,11 @@ if(!role) {
 const member = guild.members.cache.get(targetUser.id)
 member.roles.add(role)
 
-message.channel.send(`**${role.name}** added to **${targetUser.user.tag}** `)
-}
+const roled = new Discord.MessageEmbed()
+
+.setTitle(`**${role.name}** added to **${targetUser.user.tag}** `)
+.setColor(#00FFFFF)
+message.channel.send(roles)
 
 module.exports.help = {
     name: "addrole",
