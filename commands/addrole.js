@@ -13,13 +13,13 @@ const roleName = args.join(' ')
 const { guild } = message
 
 const role = guild.roles.cache.find((role) => {
-    role.name === roleName
+  return role.name === roleName
 })
 if(!role) {
     message.reply(`There is no role called **${roleName}** !`)
     return
 }
-const member = guild.member.cache.get(targetUser.id)
+const member = guild.members.cache.get(targetUser.id)
 member.roles.add(role)
 
 message.channel.send(`${role} has been granted to ${targetUser.name} `)
