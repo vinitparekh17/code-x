@@ -15,7 +15,7 @@ const role = guild.roles.cache.find((role) => {
     role.name == roleName
 })
 if(!role) {
-    message.reply('There is no role called "${roleName}" !')
+    message.reply(`There is no role called **${roleName}** !`)
     return
 }
 const member = guild.member.cache.get(targetUser.id)
