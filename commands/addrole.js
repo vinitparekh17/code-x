@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
-if(!message.member.hasPermission('ADMINISTRATION') return message.reply(`You don't have enough perms to run this command`)
+if(!message.member.hasPermission("ADMINISTRATION") return message.reply(`You don't have enough perms to run this command`)
 const targetUser = message.mentions.users.first();
 if(!targetUser) {
 message.reply('Plesse mention someone to give role')
