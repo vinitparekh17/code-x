@@ -20,7 +20,7 @@ if(!role) {
     return
 }
 const member = guild.member.cache.get(targetUser.id)
-console.log(member)
+member.roles.add(role)
 }
 
 module.exports.help = {
