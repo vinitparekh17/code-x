@@ -21,6 +21,8 @@ if(!role) {
 }
 const member = guild.member.cache.get(targetUser.id)
 member.roles.add(role)
+
+message.channel.send(` **Added ${roleName} to **${targetUser.user.username}** `)
 }
 
 module.exports.help = {
