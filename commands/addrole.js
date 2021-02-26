@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const ms = require('ms');
-module.exports.run = async(bot, message, args) => {
+module.exports.run = async(bot, message) => {
 if(!message.member.hasPermission("ADMINISTRATION")) return message.reply(`You don't have enough perms to run this command`)
 const member = message.mentions.users.first() || message.guild.members.fatch(args[0]);
 if(!member) {
