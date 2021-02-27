@@ -115,25 +115,7 @@ bot.on ("message"  , async message  =>  {
 
 
      }
-bot.on("message", message => {
-const args = message.content.split(" ").slice(1);
-    if (message.content.startsWith(prefix + "eval")) {
-    if(message.author.id !== '467004231295959040') return;
-    try {
-      const code = args.join(" ");
-      let evaled = eval(code);
 
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-      message.channel.send((evaled), {code:"js"});
-    } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${(err)}\n\`\`\``);
-    }
-  }
-});
-
-     
     
     if (message.content.startsWith(prefix + "members")){
 
