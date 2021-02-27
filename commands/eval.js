@@ -8,7 +8,10 @@ module.exports.run = async(bot, message, args) => {
  } try {
  let evaled = eval(result);
  if (!result.includes(bot.token)) {
- message.channel.send(`\`\`\`js\n${evaled}\`\`\``);
+ if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+
+ message.channel.send((evaled), {code:"js"});
  } else {
  message.reply('The bot token is not available to the public.');
  }
