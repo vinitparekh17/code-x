@@ -7,14 +7,11 @@ module.exports.run = async(bot, message, args) => {
  return message.reply('Access Denied.');
  } try {
  evaled = await eval(`(async () => {${result}})()`);
- if (!evaled.includes(bot.token)) {
  if (typeof evaled !== "string")
         evaled = require("util").inspect(evaled);
 
  message.channel.send((evaled), {code:"js"});
- } else {
  message.reply('The bot token is not available to the public.');
- }
  } catch (err) {
  message.channel.send(`\`\`\`\n${err}\`\`\``);
  }
