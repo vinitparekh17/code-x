@@ -2,7 +2,7 @@
 module.exports.run = async(bot, message, args) => {
  if (!message.author.id == '467004231295959040') return message.reply('This command is only for the developer.');
  if (!args[0]) return message.reply('You must specify code to eval.');
- var result = args.join(' ');
+ let result = args.join(' ');
  if (args.join(' ') == 'process.exit()') {
  return message.reply('Access Denied.');
  }
@@ -13,7 +13,7 @@ module.exports.run = async(bot, message, args) => {
  } else {
  message.reply('The bot token is not available to the public.');
  }
- } catch (error) {
+ } catch (err) {
  message.channel.send(`\`\`\`\n${error}\`\`\``);
  }
  }
