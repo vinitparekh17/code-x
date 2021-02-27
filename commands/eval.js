@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
  return message.reply('Access Denied.');
  }
  try {
- const evaled = eval(result);
+ let evaled = eval(result);
  if (!evaled.includes(bot.token)) {
  message.channel.send(`\`\`\`js\n${evaled}\`\`\``);
  } else {
