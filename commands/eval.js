@@ -12,7 +12,7 @@ module.exports.run = async(bot, message, args) => {
 
  message.channel.send((evaled), {code:"js"});
  } catch (err) {
- message.channel.send(`\`ERROR\` \`\`\`js\n${(err)}\n\`\`\``);
+ message.channel.send(`\`ERROR\` \`\`\`xl\n${(err)}\n\`\`\`);
  }
  }
  
