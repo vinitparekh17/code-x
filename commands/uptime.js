@@ -9,7 +9,7 @@ module.exports.run = async(bot, message, args) => {
     let uptimeE = new Discord.MessageEmbed()
     .setTitle("UPTIME")
     .setColor("RANDOM")
-    .setDescription(`\nDay(S) Online: ${days}\n\nHour(S) Online: ${hours}\n\nMinute(S) Online: ${minutes}\n\nSecond(S) Online: ${seconds}`)
+    .setDescription(`${days}d ${hours}h ${minutes}m ${seconds}s`)
     .setFooter(`Requested by: ${message.author.username}`)
     message.channel.send(uptimeE)
     return;
