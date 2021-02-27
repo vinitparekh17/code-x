@@ -11,6 +11,7 @@ module.exports.run = async(bot, message, args) => {
  message.channel.send(`\`\`\`js\n${evaled}\`\`\``);
  } else {
  message.reply('The bot token is not available to the public.');
+ }
  } catch (err) {
  message.reply(`\`\`\`\n${err}\`\`\``);
  }
