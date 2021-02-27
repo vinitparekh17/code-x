@@ -6,8 +6,8 @@ module.exports.run = async(bot, message, args) => {
  if (args.join(' ') == 'process.exit()') { 
  return message.reply('Access Denied.');
  } try {
- let evaled = eval(result);
- if (!result.includes(bot.token)) {
+ evaled = await eval(`(async () => {${result}})()`);
+ if (!evaled.includes(bot.token)) {
  if (typeof evaled !== "string")
         evaled = require("util").inspect(evaled);
 
