@@ -15,7 +15,7 @@ module.exports.run = async(bot, message, args) => {
         const StartEmbed = new MessageEmbed()
             .setAuthor("Help Embed", message.author.displayAvatarURL({ format: "png" }))
             .setColor("RED")
-            .setFooter(`Page 1/${pages.length}`);
+            .setFooter(`Page 1 abc`);
             
         let page = 0;
         let commandPage = 0;
