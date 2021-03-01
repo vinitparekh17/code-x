@@ -97,7 +97,7 @@ module.exports.run = async(client, message, args) => {
                 }
 
                     const cmdEmbed = new MessageEmbed()
-                        .setAuthor(`${command.name} Help`, message.author.displayAvatarURL({ format: "png" }))
+                        .setAuthor(`{command.name} Help`, message.author.displayAvatarURL({ format: "png" }))
                         .setColor("RED")
                         .setDescription(`dff`);
                     
@@ -114,5 +114,5 @@ module.exports.run = async(client, message, args) => {
 
 module.exports.help = {
     name: "test1",
-    aliases: ["A1"]
+    aliases: ["testing"]
 }
