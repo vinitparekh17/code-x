@@ -8,6 +8,7 @@ module.exports.run = async (bot,message,args) =>{
     }
  await message.channel.bulkDelete(delength)
 .then(messages => message.channel.send(`Bulk deleted ${messages.size} messages`))
+.then(message.channel.delete { timeout: 2000 })
 .catch(console.error)
 }
 
