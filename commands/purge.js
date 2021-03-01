@@ -8,7 +8,7 @@ module.exports.run = async (bot,message,args) =>{
     }
  await message.channel.bulkDelete(delength)
 .then(messages => message.channel.send(`<a:redtick:815864890584858694> | **${messages.size} messages has been deleted!**`))
-.then(msg => msg.delete({ timeout: 2000 }))
+.then(msg => msg.delete({ timeout: 2500 }))
 .catch(console.error)
 }
 
