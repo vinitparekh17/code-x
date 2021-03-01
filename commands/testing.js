@@ -1,6 +1,7 @@
+const Discord = require('discord.js');
 module.exports.run = async(client, message, args) => {
         const reactionEmojis = ["⬅️","➡️", "❌"];
-        const StartEmbed = new MessageEmbed()
+        const StartEmbed = new Discord.MessageEmbed()
             .setAuthor("Help Embed", message.author.displayAvatarURL({ format: "png" }))
             .setColor("RED")
             .setFooter(`Page 1`);
@@ -61,7 +62,7 @@ module.exports.run = async(client, message, args) => {
                 return startMessage.edit("", { embed: endEmbed });
 
             } else {
-                const endEmbed = new MessageEmbed()
+                const endEmbed = new Discord.MessageEmbed()
                     .setAuthor(message.author.username, message.author.displayAvatarURL({ format: "png" }))
                     .setColor("RED")
                     .setDescription("Timed Out");
@@ -96,7 +97,7 @@ module.exports.run = async(client, message, args) => {
                     commandEmbed.addField(info[1], `Click ${info[0]} to view`);
                 }
 
-                    const cmdEmbed = new MessageEmbed()
+                    const cmdEmbed = new Discord.MessageEmbed()
                         .setAuthor(`{command.name} Help`, message.author.displayAvatarURL({ format: "png" }))
                         .setColor("RED")
                         .setDescription(`dff`);
