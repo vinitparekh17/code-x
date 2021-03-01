@@ -78,7 +78,7 @@ module.exports.run = async(client, message, args) => {
                 cmdPages = [];
                 const pageData = commands.filter(c => c.category === data).map(c => c.name);
 
-                const commandEmbed = new MessageEmbed()
+                const cmdEmbed = new MessageEmbed()
                     .setColor("RED")
                     .setAuthor("Command Help", message.author.displayAvatarURL({ format: "png" }));
 
@@ -86,7 +86,7 @@ module.exports.run = async(client, message, args) => {
                     cmdPages.push(pageData.slice(i, i + 6));
                 }
 
-                commandEmbed.setFooter(`Page ${commandPage + 1}/${cmdPages.length}`);
+                cmdEmbed.setFooter(`Page {commandPage + 1}/{cmdPages.length}`);
 
                 const initialCmdData = cmdPages[commandPage];
 
