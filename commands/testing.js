@@ -3,7 +3,7 @@ module.exports.run = async(client, message, args) => {
         const StartEmbed = new MessageEmbed()
             .setAuthor("Help Embed", message.author.displayAvatarURL({ format: "png" }))
             .setColor("RED")
-            .setFooter(`Page 1);
+            .setFooter(`Page 1`);
 
         const startMessage = await message.channel.send("", { embed: StartEmbed });
 
