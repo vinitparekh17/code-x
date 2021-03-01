@@ -11,7 +11,7 @@ message.channel.clone().then((ch) => {
 ch.send('This channel has been nuked!', {
     files: [{
         attachments: 'https://c.tenor.com/SzfO_CqZSRwAAAAM/chicken-chicken-bro.gif'
-        name: 'nuke.jpg'
+        name: 'file.jpg'
     }]
    })
 }
