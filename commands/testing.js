@@ -105,6 +105,7 @@ module.exports.run = async(bot, message, args) => {
                     history.push(startMessage.embeds[0]);
 
                     return startMessage.edit("", { embed: cmdEmbed });
+                 message.channel.react(reactEmojis);
 
                 }
 
