@@ -14,7 +14,7 @@ ch.send({
         name: 'file.jpg'
     }]
    })
-}
+})
 }
 
 module.exports.help = {
