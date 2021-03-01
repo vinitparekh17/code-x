@@ -1,6 +1,6 @@
-module.exports.run = async(client, message, args) {
+module.exports.run = async(bot, message, args) {
 
-        const commands = client.commands.array();
+        const commands = bot.commands.array();
         const emojis = { 0: "1️⃣", 1: "2️⃣", 2: "3️⃣", 3: "4️⃣", 4: "5️⃣", 5: "6️⃣", 6: "7️⃣", 7: "8️⃣", 8: "9️⃣", 9: "🔟" };
         const reactionEmojis = ["↩️", "⬅️", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "➡️", "❌"];
 
@@ -155,20 +155,20 @@ module.exports.run = async(client, message, args) {
 
                     const command = commands.find(c => c.name === data);
 
-                    const commandEmbed = new MessageEmbed()
+                    const commandsEmbed = new MessageEmbed()
                         .setAuthor(`${command.name} Help`, message.author.displayAvatarURL({ format: "png" }))
                         .setColor("RED")
                         .setDescription(
-                            `Name: ${command.name}
-                            Aliases: ${command.aliases.length < 1 ? "None" : command.aliases.join(", ")}
-                            Description: ${command.description}
-                            Usage: ${prefix}${command.usage}
-                            Permission: ${command.permissions.join(", ")}`
+                            `Name: command name
+                            Aliases: command info
+                            Description: {command.description}
+                            Usage: {prefix}${command.usage}
+                            Permission: None`
                         );
                     
                     history.push(startMessage.embeds[0]);
 
-                    return startMessage.edit("", { embed: commandEmbed });
+                    return startMessage.edit("", { embed: commandsEmbed });
 
                 }
 
