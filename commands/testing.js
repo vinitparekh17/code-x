@@ -96,14 +96,14 @@ module.exports.run = async(client, message, args) => {
                     commandEmbed.addField(info[1], `Click ${info[0]} to view`);
                 }
 
-                    const commandEmbed = new MessageEmbed()
+                    const cmdEmbed = new MessageEmbed()
                         .setAuthor(`${command.name} Help`, message.author.displayAvatarURL({ format: "png" }))
                         .setColor("RED")
                         .setDescription(`dff`);
                     
                     history.push(startMessage.embeds[0]);
 
-                    return startMessage.edit("", { embed: commandEmbed });
+                    return startMessage.edit("", { embed: cmdEmbed });
 
                 }
 
