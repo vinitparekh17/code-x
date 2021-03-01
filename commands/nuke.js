@@ -8,8 +8,13 @@ message.channel.clone().then((ch) => {
     ch.setPosition(message.channel.position);
     message.channel.delete();
 
-ch.send('This channel has been nuked! https://c.tenor.com/SzfO_CqZSRwAAAAM/chicken-chicken-bro.gif ')
+ch.send('This channel has been nuked!', {
+    files: [{
+        attachments: 'https://c.tenor.com/SzfO_CqZSRwAAAAM/chicken-chicken-bro.gif'
+        name: 'nuke.jpg'
+    }]
    })
+}
 }
 
 module.exports.help = {
