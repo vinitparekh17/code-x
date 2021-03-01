@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = async(client, message, args) => {
+module.exports.run = async(bot, message, args) => {
         const reactionEmojis = ["⬅️","➡️", "❌"];
         const StartEmbed = new Discord.MessageEmbed()
             .setAuthor("Help Embed", message.author.displayAvatarURL({ format: "png" }))
