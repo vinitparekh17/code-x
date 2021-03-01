@@ -8,10 +8,10 @@ message.channel.clone().then((ch) => {
     ch.setPosition(message.channel.position);
     message.channel.delete();
 
-ch.send({
+ch.send(`This channel has been nuked`, {
     files: [{
         attachment: 'https://c.tenor.com/SzfO_CqZSRwAAAAM/chicken-chicken-bro.gif',
-        name: 'file.jpg'
+        name: 'file.gif'
     }]
    })
 })
