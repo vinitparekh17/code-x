@@ -127,7 +127,7 @@ module.exports.run = async(bot, message, args) => {
                 .setAuthor(message.author.tag, message.author.displayAvatarURL())
                 .setDescription(`[**${message.author.username}**] : ${message.content}`);
 
-                user.reply(bEmbed)
+                user.send(bEmbed)
 
         }
     }
