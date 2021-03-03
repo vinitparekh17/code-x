@@ -101,7 +101,7 @@ const openedTickets = new Map();// New map
 const ACCEPT = '<a:yesac:816648117659238462>'; // Any emoji id here
 const REJECT = '<a:noac:816648236831866900>'; // Any emoji id here
 
-module.exports.run = async(bot, message, args) => {
+bot.on ("message"  , async message  =>  {
         if (message.author.bot) return; // checks if the user is a bot
 
         const mainGuild = bot.guilds.cache.get('724858940252487720'); // Your guild id here
