@@ -227,7 +227,8 @@ module.exports.run = async(bot, message, args) => {
                 user.send(bEmbed)
 
         }
-    }
+    });
+ }
      
 
      if(message.content.startsWith(prefix + "say" )){
