@@ -125,8 +125,9 @@ module.exports.run = async(bot, message, args) => {
             const bEmbed = new Discord.MessageEmbed()
                 .setTitle('Support')
                 .setAuthor(message.author.tag, message.author.displayAvatarURL())
-                .setDescription(`[**${message.author.username}**] : ${message.content}`)
-            user.send(bEmbed);
+                .setDescription(`[**${message.author.username}**] : ${message.content}`);
+
+                user.reply(bEmbed)
 
         }
     }
