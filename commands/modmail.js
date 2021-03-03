@@ -134,5 +134,5 @@ module.exports.run = async(bot, message, args) => {
     
     module.exports.help = {
         name: "modmail",
-        aliases: ["start"]
+        aliases: []
     }
