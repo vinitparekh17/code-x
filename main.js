@@ -232,6 +232,8 @@ bot.on ("message"  , async message  =>  {
     })
 }
 
+})
+
 bot.on('guildMemberAdd' , member => 
 {
 
