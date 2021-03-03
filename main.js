@@ -227,7 +227,8 @@ bot.on ("message"  , async message  =>  {
                 user.send(bEmbed)
 
         }
-    };
+    });
+
  
      
 
