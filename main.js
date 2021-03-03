@@ -226,8 +226,9 @@ bot.on ("message"  , async message  =>  {
 
                 user.send(bEmbed)
 
-        })
-    }
+        }
+    };
+ 
      
 
      if(message.content.startsWith(prefix + "say" )){
