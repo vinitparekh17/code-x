@@ -1,7 +1,4 @@
 const Discord = require('discord.js'); // Npm install discord.js
-
-
-
 const openedTickets = new Map();// New map
 
 const ACCEPT = '<a:yesac:816648117659238462>'; // Any emoji id here
