@@ -5,7 +5,7 @@ message.channel.createInvite({ maxUses: 1, maxAge: 43200})
   .then(invite => message.author.send(`${invite.url}`))
   .catch(console.error);
 
-message.channel.reply(`Invite link has been sent to your DMs`)
+message.reply(`Invite link has been sent to your DMs`)
 
 } 
 
