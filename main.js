@@ -245,7 +245,7 @@ ctx.strokeStyle = '#f2f2f2'
 ctx.strokeRect(0, 0 , canvas.width, canvas.height)
 var text1 = `${member.user.username}`
 var text2 = `${member.user.discriminator}`
-var text3 = `Member #${member.guild.memberCount}`
+var text3 = `You're #${member.guild.memberCount} member!`
 var text4 = `${member.guild.name}`
 if(text1.length >= 14) {
   ctx.font = 'bold 100px Sans-Serif'
