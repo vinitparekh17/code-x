@@ -283,7 +283,7 @@ const welcome = new DiscordJS.MessageEmbed()
   .setTimestamp()
   .setImage('attachment://welcome-image.png')
   .attachFiles(attachment)
-  const channel = member.guild.channels.cache.find(ch => ch.id === 'ID YOUR CHANNEL')
+  const channel = member.guild.channels.cache.find(ch => ch.id === '806045165922943016')
   channel.send(welcome)
 });
 
