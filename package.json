@@ -9,7 +9,7 @@
     "imageapi.js": "^1.0.19",
     "mongoose": "^5.10.15",
     "ms": "^2.1.2",
-    "child_process"
+    npm i child_process
   },
   "devDependencies": {},
   "scripts": {
