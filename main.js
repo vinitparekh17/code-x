@@ -119,24 +119,6 @@ bot.on ("message"  , async message  =>  {
      }
 
 
-    bot.on('INTERACTION_CREATE', async interaction => {
-
-        const command = interaction.data.name.toLowerCase();
-
-        const args = interaction.data.options;
-
-        if (command === 'hello'){ 
-            bot.api.interactions(interaction.id, interaction.token).callback.post({
-                data: {
-                    type: 4,
-                    data: {
-                        content: "hi people!"
-                    }
-                }
-            })
-        }
-    })    
-
     if (message.content.startsWith(prefix + "members")){
 
         message.channel.send(`There are ${numberomember} people in this server,<:ThugPika:717419918852882476>`)
