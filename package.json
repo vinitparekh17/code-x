@@ -8,7 +8,8 @@
     "fs": "^0.0.1-security",
     "imageapi.js": "^1.0.19",
     "mongoose": "^5.10.15",
-    "ms": "^2.1.2"
+    "ms": "^2.1.2",
+    "child_process"
   },
   "devDependencies": {},
   "scripts": {
