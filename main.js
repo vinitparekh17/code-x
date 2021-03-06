@@ -119,7 +119,7 @@ bot.on ("message"  , async message  =>  {
      }
 
 
-    bot.ws.on('INTERACTION_CREATE', async interaction => {
+    bot.on('INTERACTION_CREATE', async interaction => {
 
         const command = interaction.data.name.toLowerCase();
 
