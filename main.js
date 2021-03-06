@@ -239,7 +239,7 @@ bot.on('guildMemberAdd', async(member) => {
 if(!member.guild) return
 const canvas = Canvas.createCanvas(1772, 633)
 const ctx = canvas.getContext('2d')
-const background = await Canvas.loadImage('https://c.tenor.com/39Gd45QHRAcAAAAM/water-falls-nature.png')
+const background = await Canvas.loadImage('https://cdn.discordapp.com/attachments/778566231573528597/817746752576421898/images_18.jpeg')
 ctx.drawImage(background, 0 , 0, canvas.width, canvas.height)
 ctx.strokeStyle = '#f2f2f2'
 ctx.strokeRect(0, 0 , canvas.width, canvas.height)
