@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const { Canvas } = require('canvacord');
 module.exports.run = async(bot, message, args) => {
     const user = message.members.users.first() || message.author;
     const avatar = user.displayAvatarURL((format: 'png'));
