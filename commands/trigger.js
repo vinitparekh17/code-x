@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
     const avatar = user.displayAvatarURL({format: 'png'});
     const image = await Canvas.trigger(avatar);
     message.channel.send(
-        new Discord.messageAttachment(image, 'image.gif')
+        Discord.messageAttachment(image, 'image.gif')
         )
     
 }
