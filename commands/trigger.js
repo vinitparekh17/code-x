@@ -4,9 +4,12 @@ module.exports.run = async(bot, message, args) => {
     const user = message.mentions.members.first() || message.author;
     const avatar = user.displayAvatarURL({format: 'png'});
     const image = await Canvas.trigger(avatar);
-    message.channel.send(
-        Discord.messageAttachment(image, 'image.gif')
-        )
+    message.channel.send({
+    files: [{
+        attachment: image,
+        name: 'image.gif'
+    }]
+   })
     
 }
 
