@@ -1,5 +1,5 @@
 const token = process.env.token
-const  Discord  = require('discord.js');
+const Discord  = require('discord.js');
 const bot = new Discord.Client({ ws: { intents: ['GUILDS', 'GUILD_MESSAGES','GUILD_MEMBERS','GUILD_PRESENCES'] } });
 
 const prefix = "!"
