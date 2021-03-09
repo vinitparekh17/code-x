@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Soham",
+  "author": "Vinit",
   "license": "ISC",
   "dependencies": {
     "amethyste-api": "^1.1.4",
