@@ -33,7 +33,7 @@ module.exports.run = async(bot, message, args) => {
             mention = true;
         } else mention = false;
 
-        if(mention === true) channel.send(`@everyone New Announcement`).catch(() => {} )
+        if(mention === true) channel.send(`@everyone New Announcement` , embed).catch(() => {} )
 
         if(args.some((val) => val.toLowerCase() === '-here')) {
             for (let i = 0; i < args.length; i++ ) {
@@ -43,7 +43,7 @@ module.exports.run = async(bot, message, args) => {
             mention = true;
         } else mention = false;
 
-        if(mention === true) channel.send(`@here New Announcement`)
+        if(mention === true) channel.send(`@here New Announcement` , embed)
 
     } catch (err) {
         return message.channel.send(`Oh No Oh NO oH NO NO NO NO NO.....`).then((msg) => {
