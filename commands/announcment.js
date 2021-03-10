@@ -1,16 +1,5 @@
 const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
-
-    name: 'announce',
-
-    description: 'Announce a message to a mentioned channel',
-    category: 'Admin',
-    /** 
-     * @param {Client} client 
-     * @param {Message} message 
-     * @param {String[]} args 
-     */
-    run: async(client, message, args) => {
         try{
         if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You do not have permission to use this command');
         
