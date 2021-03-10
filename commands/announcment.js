@@ -17,6 +17,13 @@ module.exports.run = async(bot, message, args) => {
 
         if(!args[1]) return message.reply('Please specify a message to announce');
 
+        const embed = new Discord.MessageEmbed()
+                .setTitle('Important Announcement')
+                .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
+                .setDescription(args.slice(1).join(" "))
+                .setTimestamp()
+                .setColor('#2BFED5')
+
         // mentions
         if(args.some((val) => val.toLowerCase() === '-all')) {
             for (let i = 0; i < args.length; i++ ) {
@@ -38,14 +45,6 @@ module.exports.run = async(bot, message, args) => {
 
         if(mention === true) channel.send(`@here New Announcement`)
 
-        const embed = new Discord.MessageEmbed()
-                .setTitle('Important Announcement')
-                .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
-                .setDescription(args.slice(1).join(" "))
-                .setTimestamp()
-                .setColor('#2BFED5')
-
-     channel.send(embed)
     } catch (err) {
         return message.channel.send(`Oh No Oh NO oH NO NO NO NO NO.....`).then((msg) => {
             setTimeout(() => {
