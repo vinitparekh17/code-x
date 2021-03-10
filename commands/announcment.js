@@ -53,8 +53,7 @@ module.exports.run = async(bot, message, args) => {
             }, 3000)
     })
     }
-   
-}}
+}
 
 module.exports.help = {
     name: "announce",
