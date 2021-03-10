@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
 
         let mention;
 
-        if(!args.length) return message.channel.send(`${emote.error}Usage:s!announce <#channel> <message> <(-all/-here)> \n \`-all\` - pings everyone. \n \`-ping here\` -here`);
+        if(!args.length) return message.channel.send(`Usage:s!announce <#channel> <message> <(-all/-here)> \n \`-all\` - pings everyone. \n \`-ping here\` -here`);
 
         const channel = message.mentions.channels.first();
         if(!channel) return message.reply('Please specify a channel!');
@@ -26,7 +26,7 @@ module.exports.run = async(bot, message, args) => {
             mention = true;
         } else mention = false;
 
-        if(mention === true) channel.send(`${emote.mega}@everyone New Announcement`).catch(() => {} )
+        if(mention === true) channel.send(`@everyone New Announcement`).catch(() => {} )
 
         if(args.some((val) => val.toLowerCase() === '-here')) {
             for (let i = 0; i < args.length; i++ ) {
@@ -36,18 +36,18 @@ module.exports.run = async(bot, message, args) => {
             mention = true;
         } else mention = false;
 
-        if(mention === true) channel.send(`${emote.mega}@here New Announcement`)
+        if(mention === true) channel.send(`@here New Announcement`)
 
-     channel.send(
-            new MessageEmbed()
+        const embed = new Discord.MessageEmbed()
                 .setTitle('Important Announcement')
                 .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(args.slice(1).join(" "))
                 .setTimestamp()
-                .setColor('#2BFED5')  
-        )
+                .setColor('#2BFED5')
+
+     channel.send(embed)
     } catch (err) {
-        return message.channel.send(`${emotes.error}Oh No Oh NO oH NO NO NO NO NO.....`).then((msg) => {
+        return message.channel.send(`Oh No Oh NO oH NO NO NO NO NO.....`).then((msg) => {
             setTimeout(() => {
                 msg.edit(`${emotes.error}An Unexpected Error Occured: **${err}** \nRun \`${config.prefix}links\` to join the support server for support`);
             }, 3000)
