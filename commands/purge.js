@@ -24,8 +24,8 @@ module.exports.run = async(bot, message, args) => {
         })
 
         if(amount >= 101) return message.channel.send({embed: new Discord.MessageEmbed()
-            .setDescription('❌ | I Can\'t delete more than 100 message at once 😢')
-            .setColor('#FF0000')
+            .setDescription('⚠️ | I Can\'t delete more than 100 message at once!')
+            .setColor('ORANGE')
             }).then(m =>{
                 m.delete({timeout: 5000})
         })
