@@ -17,7 +17,7 @@ module.exports.run = async(bot, message, args) => {
   
     const positione = new Discord.MessageEmbed()
     .setTitle(`Join Position Of ${member.tag}`)
-    .setDescription(`${member.tag} is the \`${await position}\` member to join **${message.guild.name}**`)
+    .setDescription(`${member.user.username} is the \`${await position}\` member to join **${message.guild.name}**`)
     .setColor(`#ee7373`)
     .setThumbnail(message.author.avatarURL({ dynamic: true}))
     message.channel.send(
