@@ -37,7 +37,7 @@ module.exports.run = async(bot, message, args) => {
             const filterBy = user ? message.author.id : bot.user.id; //if user doesn't exist, it will delete messages send by bot
             messages = messages.filter(m => m.author.id === filterBy && !m.pinned).array().slice(0, amount); //if message is pinned, it will ignore the message
         }
-        await message.channel.bulkDelete(messages)
+        await message.channel.bulkDelete(amount)
         }).catch(error => console.log(error));
    }
 
