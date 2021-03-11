@@ -3,7 +3,7 @@ module.exports.run = async(bot, message, args) => {
        await message.delete() //delets the command 
 
         if(!message.guild.me.permissions.has("MANAGE_MESSAGES", "ADMINISTRATOR")){
-            return message.channel.send('Sorry, i'm missing permissions').then(m => m.delete({timeout: 10000}));
+            return message.channel.send('Sorry, i'm missing permissions').then(m => m.delete({timeout: 10000}))
         } //check if the bot has permissions
 
         if(!message.member.permissions.has("MANAGE_GUILD","ADMINISTRATOR", "MANAGE_MESSAGES")){
