@@ -50,7 +50,8 @@ module.exports.run = async(bot, message, args) => {
                 .setColor(message.guild.me.displayColor)
             })
         }).catch(error => console.log(error));
-   })
+   }
+
    module.exports.help = {
        name: "purge",
        aliases: ["purge"]
