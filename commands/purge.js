@@ -38,17 +38,6 @@ module.exports.run = async(bot, message, args) => {
             messages = messages.filter(m => m.author.id === filterBy && !m.pinned).array().slice(0, amount); //if message is pinned, it will ignore the message
         }
         await message.channel.bulkDelete(messages)
-        
-            message.guild.channels.cache.get('806045165922943016').send({embed: new Discord.MessageEmbed()
-                .setAuthor('Command - PURGE')
-                .addField('Moderator', `${message.author.tag}`, true)
-                .addField('Message Amount', `${amount}`, true)
-                .addField('User', `\`\`\`${message.author.tag}`, true)
-                .addField('Channel', `${message.channel}`, true)
-                .setFooter(`${message.author.id}`)
-                .setTimestamp()
-                .setColor(message.guild.me.displayColor)
-            })
         }).catch(error => console.log(error));
    }
 
