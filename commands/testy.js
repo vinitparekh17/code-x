@@ -1,4 +1,5 @@
-  module.exports.run = async(bot, message, args) => {
+const Discord = require('discord.js');
+module.exports.run = async(bot, message, args) => {
 
     const member = message.mentions.members.first() || message.author;
 
@@ -14,7 +15,7 @@
       }
     });
   
-    const positione = new MessageEmbed()
+    const positione = new Discord.MessageEmbed()
     .setTitle(`Join Position Of ${member.tag}`)
     .setDescription(`${member.tag} is the \`${await position}\` member to join **${message.guild.name}**`)
     .setColor(`#ee7373`)
