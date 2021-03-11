@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
         } //check if the bot has permissions
 
         if(!message.member.permissions.has("MANAGE_GUILD","ADMINISTRATOR", "MANAGE_MESSAGES")){
-            return message.channel.send('You can't execute this command | mission perm').then(m => m.delete({timeout: 10000})
+            return message.channel.send('You can't execute this command | mission perm').then(m => m.delete({timeout: 10000}))
         }
 
         const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2]) //Checks if the args actually a number
