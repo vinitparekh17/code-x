@@ -15,7 +15,7 @@ module.exports.run = async(bot, message, args) => {
         const user = message.guild.member(message.mentions.users.last() || await message.guild.members.fetch(args[1]));
 
         if (!amount){
-            message.channel.send(`Please specify a number between 1 to 100`).then(m =>m.delete({timeout: 10000}))
+            message.channel.send(`You didn't provided number`).then(m =>m.delete({timeout: 10000}))
         }
 
         if(isNaN(amount)) return message.channel.send({embed: new Discord.MessageEmbed()
@@ -38,6 +38,8 @@ module.exports.run = async(bot, message, args) => {
             messages = messages.filter(m => m.author.id === filterBy && !m.pinned).array().slice(0, amount); //if message is pinned, it will ignore the message
         }
         await message.channel.bulkDelete(amount)
+       .then(messages => message.channel.send(`<a:redtick:815864890584858694> | **${messages.size} messages has been deleted!**`))
+       .then(msg => msg.delete({ timeout: 2500 }))
         }).catch(error => console.log(error));
    }
 
