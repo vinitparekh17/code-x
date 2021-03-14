@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const recon = require('reconlx');
 const ReactionPages = recon.ReactionPages;
 
-module.exports.run = async(bot, message, args) => {
+module.exports.run = async(bot, message, args, reaction) => {
     const embed1 = new Discord.MessageEmbed()
     .setTitle(`The Guardian Bot Help & Support`)
     .setColor(`#00FFDB`)
