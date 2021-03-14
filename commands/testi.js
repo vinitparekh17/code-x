@@ -14,8 +14,8 @@ module.exports.run = async(bot, message, args, reaction) => {
     .setFooter(`Pages 2/2`)
     
     const pages = [embed1. embed2];
-    const emojis = ['➡️' , '⬅️'];
-    ReactionPages = (message, pages, reaction, true, emojis, 10*1000 )
+    const emojis = ['⬅️', '➡️'];
+    ReactionPages = (message, pages, reaction, true, emojis, 10*1000)
 }
 
 module.exports.help = {
