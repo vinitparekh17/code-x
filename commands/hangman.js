@@ -9,7 +9,7 @@ module.exports.run = async(bot, message, args) => {
         const hang = new hangman({
             message: message,
             word: word,
-            bot: bot,
+            client: bot,
             channelID: channel.id,
         })
 
