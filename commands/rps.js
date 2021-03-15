@@ -40,7 +40,7 @@ module.exports.run = async(bot, message, args) => {
                     ]
                     })
                     const targetChannel = await message.guild.channels.create(`${target.user.username}-rps`.toLowerCase(), {
-                        type: 'text', parent: '813680660921188355' ,
+                        type: 'text', parent: '817326893086670902',
                         permissionOverwrites: [
                             {
                                 deny: 'VIEW_CHANNEL',
