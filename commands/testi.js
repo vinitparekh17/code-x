@@ -13,11 +13,8 @@ module.exports.run = async(bot, message, args, reaction) => {
     .setColor(`#00FFDB`)
     .setFooter(`Pages 2/2`)
     
-    const pages = [embed1. embed2];
+    const pages = [embed1, embed2];
     const emojis = ['⬅️', '➡️'];
-    message.channel.send(embed1)
-        .then(sentMessage => sentMessage.react('⬅️', '➡️'))
-        .catch(console.error)
     ReactionPages = (message, pages, reaction, true, emojis, 10*1000)
 }
 
