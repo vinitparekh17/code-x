@@ -1,7 +1,7 @@
 const ms = require('ms')
 const { MessageEmbed } = require('discord.js')
 
-module.exports.run = async(bot, message, args) => {
+module.exports.run = async(client, message, args) => {
         if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('You dont have manage messages permission.')
         
         const channel = message.mentions.channels.first()
@@ -16,11 +16,11 @@ module.exports.run = async(bot, message, args) => {
         const prize = args.slice(3).join(" ")
         if(!prize) return message.channel.send('Please sepcify a prize to win')
 
-        bot.giveaways.start(channel, {
+        client.giveaways.start(channel, {
             time : ms(duration),
             prize : prize,
             winnerCount: winners,
-            hostedBy: bot.config.hostedBy ? message.author : null,
+            hostedBy: client.config.hostedBy ? message.author : null,
             messages: {
                 giveaway: (client.config.everyoneMention ? "@everyone\n\n" : '') + "Giveaway",
                 giveawayEnd: (client.config.everyoneMention ? "@everyone\n\n" : '') + "Giveaway Ended",
