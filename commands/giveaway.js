@@ -44,7 +44,6 @@ module.exports.run = async(bot, message, args) => {
         })
         message.channel.send(`Giveaway is starting in ${channel}`)
     }
-}
 
 module.exports.help = {
     name: "Giveaway",
