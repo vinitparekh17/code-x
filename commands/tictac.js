@@ -15,6 +15,6 @@ module.exports = {
 }
 
 module.exports.help = {
-    name: "tic-tac-toe"
+    name: "tic-tac-toe",
     aliases: ["tic-tac-toe"]
 }
