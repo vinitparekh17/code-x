@@ -1,4 +1,4 @@
-const { hangman } = require('reconlx'):
+const { hangman } = require('reconlx');
 module.exports.run = async(bott, message, args) => {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('You need manage messages permission.')
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
