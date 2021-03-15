@@ -1,5 +1,5 @@
 const { hangman } = require('reconlx');
-module.exports.run = async(bott, message, args) => {
+module.exports.run = async(bot, message, args) => {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('You need manage messages permission.')
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
         if(!channel) return message.channel.send('Please specify a channel')
@@ -9,7 +9,7 @@ module.exports.run = async(bott, message, args) => {
         const hang = new hangman({
             message: message,
             word: word,
-            client: client,
+            bot: bot,
             channelID: channel.id,
         })
 
