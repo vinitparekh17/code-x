@@ -15,7 +15,7 @@ module.exports.run = async(bot, message, args) => {
             .catch(err => {
                 console.log(err)
             })
-    }
+ }
 
 module.exports.help = {
     name: "reroll",
