@@ -15,7 +15,7 @@ module.exports.run = async(bot, message, args, reaction) => {
     
     const pages = [embed1. embed2];
     const emojis = ['⬅️', '➡️'];
-    message.channel.send(embed2);
+    message.channel.send(embed1);
         .then(sentMessage => sentMessage.react(emojis))
         .catch(console.error)
     ReactionPages = (message, pages, reaction, true, emojis, 10*1000)
