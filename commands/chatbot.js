@@ -6,5 +6,5 @@ module.exports.run = async(bot, message, args) => {
 
 module.exports.help = {
     name: "chatting",
-    aliases: ["<@778284711428096000>"]
+    aliases: ["chat"]
 }
