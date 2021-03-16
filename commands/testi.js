@@ -15,7 +15,7 @@ module.exports.run = async(bot, message, args, reaction) => {
     
     const pages = [embed1, embed2];
     const emojis = ['⬅️', '➡️'];
-    ReactionPages = (message, pages, reaction, true, emojis, 10*1000)
+    ReactionPages = (message, pages, reaction, true, emojis)
 }
 
 module.exports.help = {
