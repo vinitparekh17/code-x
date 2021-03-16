@@ -4,8 +4,10 @@ module.exports.run = async(bot, message, args) => {
         const commands = bot.commands.array();
         const emojis = { 0: "1️⃣", 1: "2️⃣", 2: "3️⃣", 3: "4️⃣", 4: "5️⃣", 5: "6️⃣", 6: "7️⃣", 7: "8️⃣", 8: "9️⃣", 9: "🔟" };
         const reactionEmojis = ["↩️", "⬅️", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "➡️", "❌"];
-        message.react('↩️', '⬅️', '➡️', '❌');
 
+        message.react('↩️', '⬅️', '➡️', '❌')
+          .then(console.log)
+          .catch(console.error);
 
         const pages = [];
 
