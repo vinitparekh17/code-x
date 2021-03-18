@@ -20,6 +20,7 @@ ch.send(`This channel has been nuked`, {
 } else if(message.content.toLowerCase() === `No`) {
     message.channel.send(`Command has been cancelled!`)
     }
+}
 
 module.exports.help = {
     name: "nuke",
