@@ -24,9 +24,15 @@ ch.send(`This channel has been nuked`, {
     }]
    })
 })
-} else if(message.content.toLowerCase() === `No`) {
-    message.channel.send(`Command has been canclled`)
-    })
+} else if(message.content.toLowerCase() === 'no') {
+                message.channel.send(`${message.author} has turned down the challenge.`)
+            } else {
+                message.channel.send('Invalid Response.')
+            }
+        }).catch(collected => {
+            message.channel.send('Cancelling command')
+
+        })
 }
 
 module.exports.help = {
