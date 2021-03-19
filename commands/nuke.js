@@ -2,12 +2,12 @@ const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
 
 if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`You don't have enough permission to use this command!`)
-let filter = m => m.author.id === m.author.id
+let filter = m => m.author.id
 
 message.channel.send(`Are you sure? \nReply with \`Yes\` or \`No\``)
 message.channel.awaitMessages(filter, {
             max: 1,
-            time: 20000,
+            time: 10000,
             errors: ['time'], 
         }).then(async message => {
             message = message.first()
@@ -25,8 +25,8 @@ ch.send(`This channel has been nuked`, {
     }]
    })
 })
-} else if(message.content.toLowerCase() === 'no') {
-                message.channel.send(`${message.author} has turned down the challenge.`)
+} else if(message.content.toLowerCase() === 'No') {
+                message.channel.send(`${message.author} has cancelled the command!`)
             } else {
                 message.channel.send('Invalid Response.')
             }
