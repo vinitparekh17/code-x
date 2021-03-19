@@ -6,12 +6,12 @@ let filter = m => m.author.id
 
 message.reply(`Are you sure? \nReply with \`Yes\` or \`No\``)
 message.channel.awaitMessages(filter, {
-            max: 2,
+            max: 1,
             time: 10000,
             errors: ['time'], 
         }).then(async message => {
             message = message.first()
-if(message.content.toLowerCase() === 'Yes') {
+if(message.content.toLowerCase() === 'yes') {
 
 message.channel.clone().then((ch) => {
     ch.setParent(message.channel.parent.id);
@@ -25,13 +25,13 @@ ch.send(`This channel has been nuked`, {
     }]
    })
 })
-} else if(message.content.toLowerCase() === 'No') {
-                message.channel.send(`${message.author} has cancelled the command!`)
+            } else if(message.content.toLowerCase() === 'no') {
+                message.channel.send(`${message.author} has turned down the challenge.`)
             } else {
-                message.channel.send('Invalid Response.')
+                message.channel.send('Invalid response.')
             }
         }).catch(collected => {
-            message.channel.send('Cancelling command')
+            message.channel.send('Target did not respond in time. Cancelling.')
 
         })
 }
