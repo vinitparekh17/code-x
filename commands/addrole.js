@@ -12,7 +12,7 @@ args.shift()
 const roleName = args.join(' ')
 const { guild } = message
 
-const role = guild.roles.cache.find((role) => {
+const role = message.mentions.roles.first((role) => {
     role.name === roleName
 })
 if(!role) {
