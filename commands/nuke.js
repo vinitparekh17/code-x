@@ -6,7 +6,7 @@ let filter = m => m.author.id === message.author.id
 
 message.reply(`Are you sure? \nReply with \`Yes\` or \`No\``)
         message.channel.awaitMessages(filter, {
-            max: 2,
+            max: 1,
             time: 20000,
             errors: ['time'], 
         }).then(async message => {
