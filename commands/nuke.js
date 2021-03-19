@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
 if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`You don't have enough permission to use this command!`)
 let filter = m => m.author.id
 
-message.channel.reply(`Are you sure? \nReply with \`Yes\` or \`No\``)
+message.reply(`Are you sure? \nReply with \`Yes\` or \`No\``)
 message.channel.awaitMessages(filter, {
             max: 2,
             time: 10000,
