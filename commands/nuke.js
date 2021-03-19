@@ -26,12 +26,12 @@ ch.send(`This channel has been nuked`, {
    })
 })
             } else if(message.content.toLowerCase() === 'no') {
-                message.channel.send(`${message.author} has turned down the challenge.`)
+                message.channel.send(`${message.author} has cancelled the command!`)
             } else {
                 message.channel.send('Invalid response.')
             }
         }).catch(collected => {
-            message.channel.send('Target did not respond in time. Cancelling.')
+            message.channel.send('Cancelling Command!')
 
         })
 }
