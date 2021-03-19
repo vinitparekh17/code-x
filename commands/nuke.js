@@ -5,14 +5,14 @@ if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send
 let filter = m => m.author.id
 
 message.reply(`Are you sure? \nReply with \`Yes\` or \`No\``)
-message.channel.awaitMessages(filter, {
+        message.channel.awaitMessages(filter, {
             max: 1,
-            time: 10000,
+            time: 20000,
             errors: ['time'], 
         }).then(async message => {
             message = message.first()
-if(message.content.toLowerCase() === 'yes') {
 
+            if(message.content.toLowerCase() === 'yes') {
 message.channel.clone().then((ch) => {
     ch.setParent(message.channel.parent.id);
     ch.setPosition(message.channel.position);
