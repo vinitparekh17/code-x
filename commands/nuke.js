@@ -2,8 +2,7 @@ const Discord = require('discord.js');
 module.exports.run = async(bot, message, args) => {
 
 if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`You don't have enough permission to use this command!`)
-let filter = m = m => m.author.id
-message.channel.awaitMessages(filter, {
+message.channel.awaitMessages({
             max: 1,
             time: 20000,
             errors: ['time'], 
