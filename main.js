@@ -272,7 +272,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send
     })
 }
 
-})
+}
 
 const Canvas = require('canvas')
 bot.on('guildMemberAdd', async(member) => {
