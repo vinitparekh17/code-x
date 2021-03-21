@@ -138,9 +138,6 @@ bot.on('ready', () => {
 
 bot.on('message', (message) => {
 
-    const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-
     if (message.content.startsWith(prefix + "gstart")) {
         // g!start-giveaway 2d 1 Awesome prize!
         // will create a giveaway with a duration of two days, with one winner and the prize will be "Awesome prize!"
