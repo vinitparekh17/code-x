@@ -132,9 +132,17 @@ const manager = new GiveawaysManager(bot, {
 // We now have a giveawaysManager property to access the manager everywhere!
 bot.giveawaysManager = manager;
 
+bot.on('ready', () => {
+    console.log('I\'m ready !');
+});
+
 bot.on('message', (message) => {
 
-    if (message.content.startsWith(prefix + "gstart")){
+    const ms = require('ms'); // npm install ms
+    const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    if (command === 'start-giveaway') {
         // g!start-giveaway 2d 1 Awesome prize!
         // will create a giveaway with a duration of two days, with one winner and the prize will be "Awesome prize!"
 
@@ -182,7 +190,6 @@ bot.on('message', (message) => {
     }
 
 });
-
 
     if (message.content.startsWith(prefix + "members")){
 
