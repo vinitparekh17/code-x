@@ -138,7 +138,6 @@ bot.on('ready', () => {
 
 bot.on('message', (message) => {
 
-    const ms = require('ms'); // npm install ms
     const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
