@@ -117,75 +117,48 @@ bot.on ("message"  , async message  =>  {
 
 
      }
-const { GiveawaysManager } = require('discord-giveaways');
-// Starts updating currents giveaways
-const manager = new GiveawaysManager(bot, {
-    storage: './giveaways.json',
-    updateCountdownEvery: 10000,
-    default: {
-        botsCanWin: false,
-        exemptPermissions: ['MANAGE_MESSAGES', 'ADMINISTRATOR'],
-        embedColor: '#FF0000',
-        reaction: '🎉'
-    }
-});
-// We now have a giveawaysManager property to access the manager everywhere!
-bot.giveawaysManager = manager;
+if(message.content.startsWith(prefix + "gstart")) {
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('You dont have manage messages permission.')
+        
+        const channel = message.mentions.channels.first()
+        if(!channel) return message.channel.send('Please specify a channel')
 
-bot.on('ready', () => {
-    console.log('I\'m ready !');
-});
+        const duration = args[1]
+        if(!duration) return message.channel.send('please enter a valid duration')
 
-bot.on('message', (message) => {
+        const winners = args[2]
+        if(!winners) return message.channel.send('Please specify an amount of winners')
 
-    if (message.content.startsWith(prefix + "gstart")) {
-        // g!start-giveaway 2d 1 Awesome prize!
-        // will create a giveaway with a duration of two days, with one winner and the prize will be "Awesome prize!"
+        const prize = args.slice(3).join(" ")
+        if(!prize) return message.channel.send('Please sepcify a prize to win')
 
-        bot.giveawaysManager.start(message.channel, {
-            time: ms(args[0]),
-            prize: args.slice(2).join(' '),
-            winnerCount: parseInt(args[1])
-        }).then(() => {
-            message.channel.send('Giveaway started in the current channel!');
-        });
-        // And the giveaway has started!
-    }
-
-    if(message.content.startsWith (prefix + "reroll")) {
-        const messageID = args[0];
-        bot.giveawaysManager.reroll(messageID).then(() => {
-            message.channel.send('Success! Giveaway rerolled!');
-        }).catch(() => {
-            message.channel.send('No giveaway found for ' + messageID + ', please check and try again');
-        });
-    }
-
-    if(message.content.startsWith(prefix + "edit")){
-        const messageID = args[0];
-        bot.giveawaysManager.edit(messageID, {
-            newWinnerCount: 3,
-            newPrize: 'New Prize!',
-            addTime: 5000
-        }).then(() => {
-            // here, we can calculate the time after which we are sure that the lib will update the giveaway
-            const numberOfSecondsMax = bot.giveawaysManager.options.updateCountdownEvery / 1000;
-            message.channel.send('Success! Giveaway will updated in less than ' + numberOfSecondsMax + ' seconds.');
-        }).catch(() => {
-            message.channel.send('No giveaway found for ' + messageID + ', please check and try again');
-        });
-    }
-
-    if (message.content.startsWith(prefix + "delete")){
-        const messageID = args[0];
-        bot.giveawaysManager.delete(messageID).then(() => {
-            message.channel.send('Success! Giveaway deleted!');
-        }).catch(() => {
-            message.channel.send('No giveaway found for ' + messageID + ', please check and try again');
-        });
-    }
-
-});
+        bot.giveaways.start(channel, {
+            time : ms(duration),
+            prize : prize,
+            winnerCount: winners,
+            hostedBy: bot.config.hostedBy ? message.author : null,
+            messages: {
+                giveaway: (bot.config.everyoneMention ? "@everyone\n\n" : '') + "Giveaway",
+                giveawayEnd: (bot.config.everyoneMention ? "@everyone\n\n" : '') + "Giveaway Ended",
+                timeRemaining: "Time Remaining **{duration}**",
+                inviteToParticipate: "React with 🎉 to join the giveaway",
+                winMessage: "Congrats {winners}, you have  won the giveaway",
+                embedFooter: "Giveaway Time!",
+                noWinner: "Could not determine a winner",
+                hostedBy: 'Hosted by {user}',
+                winners: "winners",
+                endedAt: 'Ends at',
+                units: {
+                    seconds: "seconds",
+                    minutes: "minutes",
+                    hours: 'hours',
+                    days: 'days',
+                    pluralS: false
+                }
+            },
+           
+        })
+        message.channel.send(`Giveaway is starting in ${channel}`)
 
     if (message.content.startsWith(prefix + "members")){
 
