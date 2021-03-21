@@ -1,5 +1,5 @@
 const ms = require('ms')
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed } = require('discord-giveaways')
 
 module.exports.run = async(client, message, args) => {
         if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('You dont have manage messages permission.')
