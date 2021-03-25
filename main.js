@@ -127,7 +127,8 @@ bot.on ("message"  , async message  =>  {
 
     }
     bot.on('message', message => {
-
+    
+    const fetch = require('node-fetch')
     const channelid = '823778163942227968' // Channel ID
     if(message.channel.id === channelid) {
         if(message.author.bot) return
