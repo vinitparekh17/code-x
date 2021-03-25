@@ -126,20 +126,22 @@ bot.on ("message"  , async message  =>  {
 
 
     }
-    if (message.content.startsWith(prefix + "apply")){
+    bot.on('message', message => {
 
-        message.react('✅');
-        message.channel.send("Application form has been sent to ur dms!")
-
-        message.author.send("https://forms.gle/6sQ4hhZmuYDwXegj8  ye lo beta,yaha jaake apply karo")
-
-        bot.users.cache.get('551936470458433536').send(`${message.author.username} might be applying for staff roles!`);
-        bot.users.cache.get('324442848759906314').send(`${message.author.username} applied for staff.`)
-
-
-
+    const channelid = '823778163942227968' // Channel ID
+    if(message.channel.id === channelid) {
+        if(message.author.bot) return
+        fetch(
+            `https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(message)}&uid=000` // API For ChatBot
+        )
+            .then((res) => res.json())
+            .then(async (json) => {
+                return message.channel.send(`> ${message}\n${json.response}`); // User Message+Reply
+            });
     }
-    if (message.content.startsWith(prefix + "send")){
+})    
+
+if (message.content.startsWith(prefix + "send")){
         
         
         if (mention == null){
