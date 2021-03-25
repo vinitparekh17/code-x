@@ -60,23 +60,8 @@ bot.user.setStatus('dnd')
 
 })
 
-bot.on('message', message => {
-    const fetch = require(node-fetch);
-    const channelid = '823778163942227968' // Channel ID
 
-    if(message.channel.id === channelid) {
-
-        if(message.author.bot) return
-
-        fetch(
-            `https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(message)}&uid=000` // API For ChatBot
-        )
-            .then((res) => res.json())
-            .then(async (json) => {
-                return message.channel.send(`> ${message}\n${json.response}`); // User Message+Reply
-            });
-    }
-})bot.on ("message"  , async message  =>  {
+bot.on ("message"  , async message  =>  {
     const args = message.content.slice(prefix.length).trim().split(' ');
     const cmd = args.shift().toLowerCase();
     let command
@@ -163,8 +148,22 @@ bot.on('message', message => {
     
     }
 
+bot.on('message', message => {
+    const fetch = require('node-fetch')
+    const channelid = '823778163942227968' // Channel ID
 
-     message.content = message.content.toLowerCase();
+    if(message.channel.id === channelid) {
+
+        if(message.author.bot) return
+        fetch(
+            `https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(message)}&uid=000` // API For ChatBot
+        )
+            .then((res) => res.json())
+            .then(async (json) => {
+                return message.channel.send(`> ${message}\n${json.response}`); // User Message+Reply
+            });
+    }
+})     message.content = message.content.toLowerCase();
     if(message.content.includes("pandu")){
 
         let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
