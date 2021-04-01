@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 module.exports.run = async (bot, message, args) => {
-    const cembed = new Discord.MessageEmbed
+    const cembed = new Discord.MessageEmbed()
     .setTitle(`Pong?`)
     const m = await message.channel.send(cembed)
     const embed = new Discord.MessageEmbed()
