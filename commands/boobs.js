@@ -6,7 +6,7 @@ const { url } = await fetch("https://nekos.life/api/v2/img/boobs")
       .then((res) => res.json());
 
     const embed = new Discord.MessageEmbed()
-      .setTitle(msg.tr("COMMAND_BOOBS"))
+      .setTitle(`Here is some random image`)
       .setImage(url)
       .setFooter(`Requested by: ${msg.author.tag} | Powered by nekos.life`, msg.author.displayAvatarURL({ size: 32 }));
 
