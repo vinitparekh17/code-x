@@ -10,7 +10,7 @@ const { url } = await fetch("https://nekos.life/api/v2/img/boobs")
       .setImage(url)
       .setFooter(`Requested by: ${msg.author.tag} | Powered by nekos.life`, msg.author.displayAvatarURL({ size: 32 }));
 
-    return msg.send({ embed })
+    message.channel.send(embed)
 }
 
 module.exports.help = {
