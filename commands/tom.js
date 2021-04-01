@@ -1,6 +1,6 @@
 const { MessageAttachment } = require('discord.js')
 module.exports.run = async(bot, message, args) => {
-    user = await this.verifyUser(message, user, true);
+    user = message.mentions.first() || message.author
 
     const img = await this.bot.img.tom(user.displayAvatarURL({ size: 256, format: "png" }));
 
