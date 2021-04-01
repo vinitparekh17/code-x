@@ -5,3 +5,8 @@ module.exports.run = async (bot,message,args) => {
         API Latency is ${Math.round(client.ping)}ms`)
 
 }
+
+module.exports.help = {
+    name: "ping",
+    aliases: ["ping"]
+}
