@@ -10,7 +10,6 @@ module.exports.run = async(bot, message, args) => {
             message: message
         })
     }
-}
 
 module.exports.help = {
     name: "tic-tac-toe",
