@@ -221,53 +221,6 @@ if (message.content.startsWith(prefix + "send")){
 
 })
 
-const Canvas = require('canvas')
-bot.on('guildMemberAdd', async(member) => {
-if(!member.guild) return
-const canvas = Canvas.createCanvas(1772, 633)
-const ctx = canvas.getContext('2d')
-const background = await Canvas.loadImage('https://cdn.discordapp.com/attachments/778566231573528597/817746752576421898/images_18.jpeg')
-ctx.drawImage(background, 0 , 0, canvas.width, canvas.height)
-ctx.strokeStyle = '#f2f2f2'
-ctx.strokeRect(0, 0 , canvas.width, canvas.height)
-var text1 = `${member.user.username}`
-var text2 = `You're #${member.guild.memberCount} member!`
-var text3 = `${member.guild.name}`
-if(text1.length >= 14) {
-  ctx.font = 'bold 100px Sans-Serif'
-  ctx.fillStyle = '#f2f2f2'
-  ctx.fillText(text1, 720, canvas.height / 2 +20)
-}
-else {
-  ctx.font = 'bold 150px Sans-Serif'
-  ctx.fillStyle = '#f2f2f2' 
-  ctx.fillText(text1, 720, canvas.height / 2 + 20)
-}
-
-ctx.font = 'bold 60px Sans-Serif'
-ctx.fillStyle = '#f2f2f2'
-ctx.fillText(text2, 750, canvas.height / 2 + 135)
-
-ctx.font = 'bold 60px Sans-Serif'
-ctx.fillStyle = '#f2f2f2'
-ctx.fillText(text3, 700, canvas.height / 2 - 150)
-
-ctx.beginPath()
-ctx.arc(315, canvas.height / 2, 250, 0, Math.PI * 2, true)
-ctx.closePath()
-ctx.clip()
-
-const avatar = await Canvas.loadImage(member.user.displayAvatarURL({format: 'jpg'}))
-ctx.drawImage(avatar, 65, canvas.height / 2 - 250, 500, 500)
-const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png')
-const welcome = new Discord.MessageEmbed()
-  .setColor('RED')
-  .setTimestamp()
-  .setImage('attachment://welcome-image.png')
-  .attachFiles(attachment)
-  const channel = member.guild.channels.cache.find(ch => ch.id === '806045165922943016')
-  channel.send(welcome)
-});
 
 
 bot.login(token);
