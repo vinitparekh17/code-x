@@ -6,7 +6,7 @@ if (!player) return message.channel.send('Please give winners ');
 const embed = new Discord.MessageEmbed()
 
 .setTitle("Each winner getss 50rs each")
-.setDescription(`<a:Minigame_Crown:795920833645903872> Winners <a:Minigame_Crown:795920833645903872>\n ${player}`) 
+.setDescription(`<a:Minigame_Crown:795920833645903872> Winners <a:Minigame_Crown:795920833645903872>\n ${player.user.username}`) 
 .setColor("#00ffff")   
 .setFooter(bot.user.username, bot.user.displayAvatarURL());
 message.channel.send(embed), message.react('✅');
