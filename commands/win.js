@@ -9,8 +9,8 @@ const embed = new Discord.MessageEmbed()
 .addField('<a:Minigame_Crown:795920833645903872> Winners <a:Minigame_Crown:795920833645903872>\nNo. 1 : args[0]\nNo. 2 : args[1]') 
 
 .setColor("#00ffff")   
-.setFooter(message.bot.user.username, message.bot.user.displayAvatarURL());
-message.channel.send(a , embed), message.react('✅');
+.setFooter(bot.user.username, bot.user.displayAvatarURL());
+message.channel.send(embed), message.react('✅');
 
   }
 
