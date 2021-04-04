@@ -9,7 +9,7 @@ if(!args.length) return message.reply(`What you want to search?`)
         throw "I couldn't find a wikipedia article with that title!";
       });
     
-    if(!article.content_urls) throw "I couldn't find a wikipedia article with that title!";
+    if(!article.content_urls) return message.reply(`I couldn't find a wikipedia article with that title!`);
     const embed = new Discord.MessageEmbed()
       .setThumbnail("https://i.imgur.com/fnhlGh5.png")
       .setURL(article.content_urls.desktop.page)
