@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 module.exports.run = async(bot, message, args) => {
-const player = args.join(" ").spilt(",");
+const player = args.join(" ")
 if (!player) return message.channel.send('Please give winners ');
 
 const embed = new Discord.MessageEmbed()
