@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 module.exports.run = async(bot, message, args) => {
    const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-if(!member) member = message.member
+   if(!member) member = message.member;
 
 this.statuses = {
       online: "<:online:473263910045351957> Online",
