@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-module.exports.run = async(bot, message, args) => {
+module.exports.run = async(bot, message) => {
 let args[0] = a
 let args[1] = b
 if (args[0] === null) return message.channel.send('Please give winners ');
