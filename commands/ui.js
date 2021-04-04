@@ -3,6 +3,13 @@ module.exports.run = async(bot, message, args) => {
    const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 if(!member) member = message.member
 
+this.statuses = {
+      online: "<:online:473263910045351957> Online",
+      idle: "<:idle:473264190346493964> Idle",
+      dnd: "<:dnd:473264076852559873> Do Not Disturb",
+      offline: "Offline"
+    }
+
     const embed = new Discord.MessageEmbed()
       .setColor(`member.displayHexColor || 0x9590EE`)
       .setThumbnail(member.user.displayAvatarURL({ size: 512 }))
