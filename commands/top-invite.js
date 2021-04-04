@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = asyn(bot, message, args) => {
+module.exports.run = async(bot, message, args) => {
     const invites = await msg.guild.fetchInvites();
     const topTen = invites.filter((inv) => inv.uses > 0).sort((a, b) => b.uses - a.uses).first(10);
 
