@@ -8,7 +8,7 @@ const name = args[1];
     const url = `https://cdn.discordapp.com/emojis/${emoji}.png`;
     return this.create(message, url, name, "Couldn't create emoji, make sure the ID is valid.");
 
-    const emoji = await message.guild.emojis.create(url, name).catch(() => {
+    const emoji = await message.guild.emojis.create(url, name)
     message.channel.send(`Done! created new emoji ${emoji.name} ${emoji.toString()}`);
   }
   
