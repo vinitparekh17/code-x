@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
     const embed = new Discord.MessageEmbed()
       .setTitle(`Top Invites in ${message.guild.name}`)
       .setAuthor(message.guild.name, message.guild.iconURL())
-      .setDescription(topTen.map((inv) => `• **${inv.inviter.username}**'s invite **${inv.code}** has **${inv.uses.toLocaleString()}** uses.`).join("\n"))
+      .setDescription(topTen.map((inv) => `• **${inv.inviter.username}** has **${inv.uses.toLocaleString()}** Invites.`).join("\n"))
        message.channel.send(embed)
 }
 
