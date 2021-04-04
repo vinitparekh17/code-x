@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 module.exports.run = async(bot, message, args) => {
-   const member = message.mentions.members.first() || message.member;
+   const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
+if(!member) member = message.member
 
     const embed = new Discord.MessageEmbed()
       .setColor(`member.displayHexColor || 0x9590EE`)
