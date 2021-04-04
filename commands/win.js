@@ -6,7 +6,7 @@ if (args[0] === null) return message.channel.send('Please give winners ');
 const embed = new Discord.MessageEmbed()
 
 .setTitle("Each winner getss 50rs each")
-.addField(`<a:Minigame_Crown:795920833645903872> Winners <a:Minigame_Crown:795920833645903872>\nNo. 1 : args[0]\nNo. 2 : args[1]`) 
+.addField(`<a:Minigame_Crown:795920833645903872> Winners <a:Minigame_Crown:795920833645903872>\nNo. 1 : args[0] \nNo. 2 : args[1]`) 
 
 .setColor("#00ffff")   
 .setFooter(bot.user.username, bot.user.displayAvatarURL());
