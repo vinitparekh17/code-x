@@ -7,7 +7,7 @@ module.exports.run = async(message, [emoji, name]) => {
     return this.create(message, url, name, "Couldn't create emoji, make sure the ID is valid.");
   }
   
-  async create(message, url, name, err = "Something went wrong, make sure the URL is valid and returns an image.") {
+  message.reply(message, url, name, err = "Something went wrong, make sure the URL is valid and returns an image.") {
     const emoji = await message.guild.emojis.create(url, name).catch(() => {
       throw err;
     });
