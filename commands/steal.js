@@ -1,7 +1,7 @@
 module.exports.run = async(bot, message, args) => {
 const newemoji = args[0];
 const name = args[1];
-    if(!newemoji || !name) return message.send(`Usage: \`!steal <url to image or emoji id> <name to save as>\``);
+    if(!newemoji || !name) return message.reply(`Usage: \`!steal <url to image or emoji id> <name to save as>\``);
     if(emoji.includes("http")) return this.create(message, emoji, name);
     const e = this.client.emojis.cache.get(emoji);
     if(e) return this.create(message, e.url, name, "Something went wrong.");
