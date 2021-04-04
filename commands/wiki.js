@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports.run = async(bot, message, args) => {
-if(!args[0]) return message.reply(`What you want to search?`)
+if(!args.length) return message.reply(`What you want to search?`)
     const article = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(args.join(" "))}`)
       .then((res) => res.json())
       .catch(() => {
