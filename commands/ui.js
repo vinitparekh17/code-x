@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 module.exports.run = async(bot, message, args) => {
-   const member = message.mentions.first() || message.author;
+   const member = message.mentions.members.first() || message.author;
     const days = Math.floor((new Date() - member.user.createdAt) / (1000 * 60 * 60 * 24));
     const joinedDays = Math.floor((new Date() - member.joinedAt) / (1000 * 60 * 60 * 24));
 
