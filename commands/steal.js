@@ -1,4 +1,6 @@
-module.exports.run = async(bot, message, args[emoji, name]) => {
+module.exports.run = async(bot, message, args) => {
+const emoji = args[0];
+const name = args[1];
     if(!emoji || !name) return message.send(`Usage: \`!steal <url to image or emoji id> <name to save as>\``);
     if(emoji.includes("http")) return this.create(message, emoji, name);
     const e = this.client.emojis.cache.get(emoji);
