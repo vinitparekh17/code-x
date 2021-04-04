@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
       .addField("❯ Name", member.user.tag, true)
       .addField("❯ ID", member.id, true)
       .addField("❯ Discord Join Date", `${member.user.createdAt.toDateString()}`, true)
-      .addField("❯ Server Join Date", `${member.joinedAt.toDateString()}, true)
+      .addField("❯ Server Join Date", `${member.joinedAt.toDateString()}`, true)
       .addField("❯ Status", this.statuses[member.presence.status], true)
       .addField("❯ Bot", member.user.bot ? "Yes" : "No", true)
       .addField("❯ Highest Role", member.roles.cache.size > 1 ? member.roles.highest.name : "None", true)
