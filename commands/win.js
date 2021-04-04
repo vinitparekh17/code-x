@@ -1,15 +1,15 @@
 const Discord = require('discord.js')
 module.exports.run = async(bot,message,args) => {
-const a = args.join(" ")
-if (!a) return message.channel.send('Please give winners ');
+const a = args.join(" ").split(",")
+if (args[0] === null) return message.channel.send('Please give winners ');
 
 const embed = new Discord.MessageEmbed()
 
 .setTitle("Each winner getss 50rs each")
-.addField('<a:Minigame_Crown:795920833645903872> Winners <a:Minigame_Crown:795920833645903872>', a)
+.addField('<a:Minigame_Crown:795920833645903872> Winners <a:Minigame_Crown:795920833645903872>', \n Rank 1 : args[0]\nRank 2 : args[1]') 
 
 .setColor("#00ffff")   
-.setFooter(message.client.user.username, message.client.user.displayAvatarURL());
+.setFooter(message.bot.user.username, message.bot.user.displayAvatarURL());
 message.channel.send(a , embed), message.react('✅');
 
   }
