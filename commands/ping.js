@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     const m = await message.channel.send(cembed)
     const embed = new Discord.MessageEmbed()
     .setTitle(`Ping...`)
-    .setDescription(`>>> 🏓 Pong!\nLatency is \`${Math.floor(message.createdTimestamp - message.createdTimestamp)}ms\``)
+    .setDescription(`>>> 🏓 Pong!\nLatency is \`${Math.floor(message.createdTimestamp} ms\``)
     .setColor(`RANDOM`)
     .setTimestamp()
        m.edit(embed)
