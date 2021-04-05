@@ -4,6 +4,7 @@
   "description": "Discord server bot for vinit's server The Champion",
   "main": "main.js",
   "dependencies": {
+    "child_process": "^1.0.2",
     "discord.js": "^12.4.1",
     "fs": "^0.0.1-security",
     "imageapi.js": "^1.0.19",
