@@ -18,9 +18,9 @@ message.channel.clone().then((ch) => {
     ch.setPosition(message.channel.position);
     message.channel.delete();
 
-ch.send(`This channel has been nuked`, {
+ch.send(`/`message.author.tag/` nuked this channel!`, {
     files: [{
-        attachment: 'https://c.tenor.com/SzfO_CqZSRwAAAAM/chicken-chicken-bro.gif',
+        attachment: 'https://cdn.discordapp.com/attachments/830741522571329536/830741527503306770/dribbblepost_03.gif',
         name: 'file.gif'
     }]
    })
