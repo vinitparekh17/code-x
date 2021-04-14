@@ -2,7 +2,7 @@ module.exports.run = async(bot, message, args) => {
   
   
   
-let emojis = msg.guild.emojis.cache.filter(emoji => emoji.animated);
+let emojis = message.guild.emojis.cache.filter(emoji => emoji.animated);
 const ids = (emojis.map(e => '<'+'a'+':'+ e.name +':'+e.id+'>'
 ));
 const names = (emojis.map(e => ':'
@@ -34,9 +34,9 @@ for (var key in arr) {
     
  
  
-let channel = msg.mentions.channels.first();
-if (!channel) return msg.reply('Please provide a channel');
-if (!sayMessage) return msg.reply
+let channel = message.mentions.channels.first();
+if (!channel) return message.reply('Please provide a channel');
+if (!sayMessage) return message.reply
 ('Please provide a message');
  
  channel.send(new_str)
