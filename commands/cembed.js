@@ -3,7 +3,7 @@ module.exports.run = async(bot, message, args) => {
     // Code Begin
     let embed = null;
     const channel = message.mentions.channels.first(); // Take first channel mention from the message
-    if (!channel) return message.channel.send('Specify a channel to send embed!')
+    if (!channel) return message.channel.send('\`\`\`Correct Usage:\n\n**!cembed #channel | title | description | footer | color | thumbnail-url | image-url**\`\`\`')
     args.shift(); // Shifting argument because args[0] is channel mention!
     const arg = args.join(" "); // Joining args to split it by '^' Symbol!
     const title = arg.split('^')[0];
