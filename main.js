@@ -118,6 +118,30 @@ bot.on ("message"  , async message  =>  {
 
      }
 
+     if(message.content.startsWith('https://discord.com/channels/')){
+
+    let url = message.content
+
+    let sus = url.split('/')
+    sus.shift()
+    bot.channels.fetch(sus[4])
+    .then(channel =>{
+      channel.messages.fetch(sus[5])
+      .then(message =>{
+        const em = new Discord.MessageEmbed()
+          .setAuthor(`Message from ${message.author.username}`)
+          .setDescription('Message: ' + '"' + message.content + '"')
+          .addField("Source" , '[Jump to the source](args[0])')
+        let f = message.guild.channels.cache.get(`823778212575313931`)
+        f.send(em)
+      })
+      
+    })
+    .catch(err =>{
+      console.log('A error occured')
+    })
+  }
+
 
     if (message.content.startsWith(prefix + "members")){
 
