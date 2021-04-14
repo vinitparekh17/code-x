@@ -131,7 +131,7 @@ bot.on ("message"  , async message  =>  {
         const em = new Discord.MessageEmbed()
           .setAuthor(`Message from ${message.author.username}`)
           .setDescription('Message: ' + '"' + message.content + '"')
-          .addField("Source" , '[Jump to the source](args[0])')
+          .addField("Source" , `[Jump to the source](${url})`)
         let f = message.guild.channels.cache.get(`823778212575313931`)
         f.send(em)
       })
