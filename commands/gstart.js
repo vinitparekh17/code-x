@@ -2,7 +2,7 @@
 let Discord = require('discord.js');
 const { prefix } = "!g";
 
-module.exports.run = async(bott, message, args) => {
+module.exports.run = async(bot, message, args) => {
         if (!message.guild) return;
         async function giveaway() {
             var time = '';
