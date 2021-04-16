@@ -60,7 +60,35 @@ bot.user.setStatus('dnd')
 
 })
 
+bot.on('ready', () => {
 
+    bot.api.applications(bot.user.id).guilds(GUILD_ID_HERE).commands.post({
+
+        data: {
+
+            name: "hi",
+            description: "hi world command"
+            // options here e.g options: [{...}]
+        }
+    });
+
+
+    bot.ws.on('INTERACTION_CREATE', async interaction => {
+        const command = interaction.data.name.toLowerCase();
+        const args = interaction.data.options;
+
+        if (command === 'hello'){ 
+            bot.api.interactions(interaction.id, interaction.token).callback.post({
+                data: {
+                    type: 4,
+                    data: {
+                        content: "hi people!"
+                    }
+                }
+            })
+        }
+    });
+});
 
 bot.on ("message"  , async message  =>  {
     const args = message.content.slice(prefix.length).trim().split(' ');
