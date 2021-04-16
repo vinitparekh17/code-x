@@ -1,6 +1,6 @@
 // Dependencies
 let Discord = require('discord.js');
-const { prefix } = "!";
+const { prefix } = "!g";
 
 module.exports.run = async(bott, message, args) => {
         if (!message.guild) return;
@@ -64,7 +64,7 @@ module.exports.run = async(bott, message, args) => {
                         let msg = await message.channel.send(':tada: **GIVEAWAY** :tada:', embed)
                         await msg.react('🎉')
                         setTimeout(() => {
-                            msg.reactions.cache.get('🎉').users.remove(client.user.id)
+                            msg.reactions.cache.get('🎉').users.remove(bot.user.id)
                             setTimeout(() => {
                                 let winner = msg.reactions.cache.get('🎉').users.cache.random();
                                 if (msg.reactions.cache.get('🎉').users.cache.size < 1) {
