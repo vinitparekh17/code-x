@@ -62,7 +62,7 @@ bot.user.setStatus('dnd')
 
 bot.on('ready', () => {
 
-    bot.api.applications(bot.user.id).guilds(GUILD_ID_HERE).commands.post({
+    bot.api.applications(bot.user.id).guilds(823605894557335582).commands.post({
 
         data: {
 
