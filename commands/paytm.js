@@ -7,7 +7,7 @@ module.exports.run = async(bot,message,args) => {
     const server = message.guild;
          console.log("1")
         server.channels.create(`paytm-${message.author.username}` , {
-          type: 'text', parent: '764343582177624124',
+          type: 'text',
 
           permissionOverwrites: [
 
