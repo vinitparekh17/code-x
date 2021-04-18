@@ -1,6 +1,6 @@
 const sourcebin = require('sourcebin_js');
 const { MessageEmbed } = require('discord.js');
-module.exports.run => async (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
 		const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0]) || message.channel;
 		if (channel.name.includes('ticket-')) {
 			if (message.member.hasPermission('ADMINISTRATOR') || channel.name === `ticket-${message.author.tag}`) {
