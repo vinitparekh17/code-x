@@ -2,8 +2,7 @@ const { DiscordAPIError } = require("discord.js");
 const Discord = require('discord.js')
 
 module.exports.run = async(bot,message,args) => {
-    message.react('<a:ac_loading:806430327924457492>')
-   if(message.channel.name.startsWith('𒀚〢prize-claim')){
+    message.react('<a:ac_loading:806430327924457492>'){
     const server = message.guild;
          console.log("1")
         server.channels.create(`ticket-${message.author.username}` , {
@@ -59,5 +58,5 @@ module.exports.run = async(bot,message,args) => {
     }
     module.exports.help = {
         name: "paytmdetails",
-        aliases: ["paytm"]
+        aliases: ["ticket"]
     }
