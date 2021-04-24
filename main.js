@@ -116,7 +116,7 @@ bot.on ("message"  , async message  =>  {
 
      }
 
-     if(message.content.startsWith('https://discord.com/channels/')){
+    if(message.content.startsWith('https://discord.com/channels/')){
 
     let url = message.content
 
@@ -167,22 +167,6 @@ if (message.content.startsWith(prefix + "send")){
     
     }
 
-
-     message.content = message.content.toLowerCase();
-    if(message.content.includes("pandu")){
-
-        let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
-
-        message.react(`${ranpanda}`);
-
-    }
-    if(message.content.includes("panda")){
-
-        let ranpanda = pandaemojis[Math.floor(Math.random()*pandaemojis.length)]
-
-        message.react(`${ranpanda}`);
-
-    }
     if(message.content.startsWith(prefix)){
     if (bot.commands.has(cmd))
     command = bot.commands.get(cmd);
