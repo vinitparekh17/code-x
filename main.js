@@ -1,3 +1,13 @@
+const express = require('express');
+const app = express()
+
+app.get("/", (req, res) => {
+  res.send("Updated Version")
+})
+
+app.listen(3000, () => {
+  console.log("project is ready")
+})
 const token = "ODMyNTY4MjUxMTU3MzE1NjA0.YHlrmw.Lb6gw68jotKeBK3hR6ArBbPLxrA";
 const Discord  = require('discord.js');
 const bot = new Discord.Client();
