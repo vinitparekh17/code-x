@@ -1,0 +1,41 @@
+{
+  "name": "vinitbot-master",
+  "version": "1.0.0",
+  "description": "Discord server bot for vinit's server The Champion",
+  "main": "main.js",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "common-tags": "^1.8.0",
+    "discord-giveaways": "^4.4.3",
+    "discord-player": "^4.0.5",
+    "discord.js": "github:monbrey/discord.js#inline-replies",
+    "discord.js-pagination": "^1.0.3",
+    "fs": "^0.0.1-security",
+    "fs-nextra": "^0.5.1",
+    "imageapi.js": "^1.0.19",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.3",
+    "ms": "^2.1.2",
+    "node-os-utils": "^1.3.5",
+    "parse-ms": "^3.0.0",
+    "path": "^0.12.7",
+    "snekfetch": "^4.0.4",
+    "sourcebin_js": "0.0.3-ignore",
+    "sqlite": "^4.0.21",
+    "twemoji-parser": "^13.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soham",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinitsoni17/Champ17.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vinitsoni17/Champ17/issues"
+  },
+  "homepage": "https://github.com/vinitsoni17/Champ17#readme"
+}
