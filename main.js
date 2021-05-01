@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
   console.log("project is ready")
 })
-const token = "ODMyNTY4MjUxMTU3MzE1NjA0.YHlrmw.Lb6gw68jotKeBK3hR6ArBbPLxrA";
+const token = \\"YOUR TOKEN HERE";
 const Discord  = require('discord.js');
 const bot = new Discord.Client();
 const prefix = "!"
