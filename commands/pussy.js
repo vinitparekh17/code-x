@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports.run = async(bot, message, args) => {
+    if(!message.channel.nsfw) return message.reply(`This command is only works in NSFW channels`)
 const { url } = await fetch("https://nekos.life/api/v2/img/pussy")
       .then((res) => res.json());
 

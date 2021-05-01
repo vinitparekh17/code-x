@@ -15,8 +15,8 @@ module.exports.run = async(bot, message, args) => {
 }
 
   const time = args[0];
-  if(!time) { return message.channel.send(`${message.author}, specify a time.\nUsage: \`.slowmode <time>\``); }
-  if(isNaN(time)) { return message.channel.send(`${message.author}, **${time}** is not a number.\nUsage: \`.slowmode <time>\``);  }
+  if(!time) return message.reply(`${message.author}, specify a time.\nUsage: \`.slowmode <time>\``)
+  if(isNaN(time)) { return message.reply(`${message.author}, **${time}** is not a number.\nUsage: \`.slowmode <time>\``);  }
 
   message.channel.setRateLimitPerUser(time)
   message.channel.send(`slowmode in ${message.channel} set to \`${time.toHHMMSS()}\``)
